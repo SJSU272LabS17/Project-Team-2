@@ -1,10 +1,10 @@
 import datetime as dt
 import matplotlib.pyplot as plt
-import matplotlib 
+import matplotlib as style
 import pandas as pand
 import pandas_datareader as rdata
 
-matplotlib.style.use('ggplot')
+style.use('ggplot')
 start = dt.datetime(2010,1,1)
 end = dt.datetime.now()
 dataframe = rdata.DataReader('AAPL', "google", start, end)
