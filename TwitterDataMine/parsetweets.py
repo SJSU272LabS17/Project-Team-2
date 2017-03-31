@@ -2,6 +2,7 @@ import json
 import pandas as pd
 import matplotlib.pyplot as plt
 
+o finance python
 tweets_data_path= 'tweetdata.txt'
 
 tweets_data = []
