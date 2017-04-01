@@ -2,6 +2,9 @@
 
 For this semester we have the following ideas for our project:
 
+Updated idea #1:
+We will combine idea #1 and #2, as we want to mine data from twitter to use it for our predict model about the stock market. For instance, we gather trends on twitter about a certain product (a new iPhone, a new AMD chip...) and see if the stock for those companies that make the products will go up or down.
+
 Project Idea #1: Stock market predictor
 The program will analyze and build a predict model for any company based on their market performance, products, accquisitions, and innovations. This will also take into account how people react to certain product annoucements, future planning, and roadmaps. The result will indicate if it's a good time to buy a company's stock, or sell it.
 
