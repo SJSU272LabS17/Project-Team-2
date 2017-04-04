@@ -1,5 +1,9 @@
 # Project-Team-2
+New idea goes here:
+Still discussing.
 
+
+OLD idea:
 For this semester we have the following ideas for our project:
 
 Updated idea #1:
