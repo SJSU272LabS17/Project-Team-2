@@ -1,14 +1,10 @@
-# Project-Team-2
-New idea goes here:
-Still discussing.
+Project Idea #1:
+Making an investment is always a risk, especially in the ever changing market. We aim to provide an analytics solution that will improve over time to help investors making the correct decisions. Using 2 factors, stock market performance and twitter mining analysis, we want to give a predict model, with a % of confident level, for stocks of a particularly publid traded company. Twitter data mining will serve as a base for market analysis, identify a trend of public opinion about a certain product. Based on this and the data extrapolated from stock performance analysis, our model will give a confident level in % and a recommendation for when the stocks are good to sell or good to buy.
 
-------------------------------------------------------------------------------------------------------------------------
-OLD idea:
-For this semester we have the following ideas for our project:
 
-Updated idea #1:
-We will combine idea #1 and #2, as we want to mine data from twitter to use it for our predict model about the stock market. For instance, we gather trends on twitter about a certain product (a new iPhone, a new AMD chip...) and see if the stock for those companies that make the products will go up or down. This is one of the factors for our predict model, along with stock analysis. At the end, our program will give a confident value and recommendation for if a company's stock is a good buy or good time to sell. We hope to be able to use some machine learing in analysis the stock market and twitter data.
 
+OLD IDEAS:
+----------------------------------------------------------------------------------------------------------------------------------------
 Project Idea #1: Stock market predictor
 The program will analyze and build a predict model for any company based on their market performance, products, accquisitions, and innovations. This will also take into account how people react to certain product annoucements, future planning, and roadmaps. The result will indicate if it's a good time to buy a company's stock, or sell it.
 
