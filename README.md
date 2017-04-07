@@ -1,4 +1,5 @@
 Project Idea #1 Stock market predictor:
+
 Making an investment is always a risk, especially in the ever changing market. We aim to provide an analytics solution that will improve over time to help investors making the correct decisions. Using 2 factors, stock market performance and twitter mining analysis, we want to give a predict model, with a % of confident level, for stocks of a particularly publid traded company. Twitter data mining will serve as a base for market analysis, identify a trend of public opinion about a certain product. Based on this and the data extrapolated from stock performance analysis, our model will give a confident level in % and a recommendation for when the stocks are good to sell or good to buy.
 
 Project Idea #2 Freelancer platform for charitable electronic work, and other freelance work:
