@@ -8,6 +8,23 @@ We borrow this idea from your blog, but we want to tweak this so that this freel
 
 This platform will allow non-profit charitable organization to post their work which volunteers can pick and assign themselves. The work can be anything like, preparing a database, spreadsheet, tabulating, grading papers, etc..) once finished on time and correctly, volunteers can earn badges which can be showcased on Linkedin or facebook.
 
+Project Idea#3: Grocercy Bargain
+--------------------------------
+
+	Every year united states throws away one-thirds of the food it produces causing billion dollar wastage. Infact some of major retailers dispose the food 3 days before the sell by date as customers no longer choose them. The major cause of this wastage is due to the lack of awareness among the customer regarding the whereabouts of the products,sell-by-dates and the discounted prices at which they are available.
+
+we propose a solution to this by creating a common platform for the sellers of retail outlets to post about these items with specific details about products as below
+
+a)Type of the product
+b)Quantity
+c)Sell-by-date
+d)discounted price proposed
+e)details about condition and physical damage if any.
+
+When a buyer logins into the portal he can view the quantity,discounted prices,sell-by-date, seller details with location from different retailers ,to choose the best product according to his need.
+
+we can also enhance the platform in future to help sellers improve and maintain their customer base by introducing loyality points for every purchase that can be used for goods purchase in website.
+
 
 OLD IDEAS:
 ----------------------------------------------------------------------------------------------------------------------------------------
