@@ -1,13 +1,12 @@
-<!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+ <?php
+
+ 		session_start();
+	
+	?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Grocery Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Sign In & Sign Up :: w3layouts</title>
+<title>Grocery Bargain</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -42,83 +41,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <body>
 <!-- header -->
-	<div class="agileits_header">
-		<div class="w3l_offers">
-			<a href="products.html">Today's special Offers !</a>
-		</div>
-		<div class="w3l_search">
-			<form action="#" method="post">
-				<input type="text" name="Product" value="Search a product..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search a product...';}" required="">
-				<input type="submit" value=" ">
-			</form>
-		</div>
-		<div class="product_list_header">
-			<form action="#" method="post" class="last">
-                <fieldset>
-                    <input type="hidden" name="cmd" value="_cart" />
-                    <input type="hidden" name="display" value="1" />
-                    <input type="submit" name="submit" value="View your cart" class="button" />
-                </fieldset>
-            </form>
-		</div>
-		<div class="w3l_header_right">
-			<ul>
-				<li class="dropdown profile_details_drop">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
-					<div class="mega-dropdown-menu">
-						<div class="w3ls_vegetables">
-							<ul class="dropdown-menu drp-mnu">
-								<li><a href="login.html">Login</a></li>
-								<li><a href="login.html">Sign Up</a></li>
-							</ul>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="w3l_header_right1">
-			<h2><a href="mail.html">Contact Us</a></h2>
-		</div>
-		<div class="clearfix"> </div>
-	</div>
-<!-- script-for sticky-nav -->
-	<script>
-	$(document).ready(function() {
-		 var navoffeset=$(".agileits_header").offset().top;
-		 $(window).scroll(function(){
-			var scrollpos=$(window).scrollTop();
-			if(scrollpos >=navoffeset){
-				$(".agileits_header").addClass("fixed");
-			}else{
-				$(".agileits_header").removeClass("fixed");
-			}
-		 });
+<?php
+	if($_SERVER['REQUEST_METHOD']== "POST"){
+		include("php/dbconnect.php");
 
-	});
-	</script>
-<!-- //script-for sticky-nav -->
-	<div class="logo_products">
-		<div class="container">
-			<div class="w3ls_logo_products_left">
-				<h1><a href="index.html"><span>Grocery</span> Store</a></h1>
-			</div>
-			<div class="w3ls_logo_products_left1">
-				<ul class="special_items">
-					<li><a href="events.html">Events</a><i>/</i></li>
-					<li><a href="about.html">About Us</a><i>/</i></li>
-					<li><a href="products.html">Best Deals</a><i>/</i></li>
-					<li><a href="services.html">Services</a></li>
-				</ul>
-			</div>
-			<div class="w3ls_logo_products_left1">
-				<ul class="phone_email">
-					<li><i class="fa fa-phone" aria-hidden="true"></i>(+0123) 234 567</li>
-					<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:store@grocery.com">store@grocery.com</a></li>
-				</ul>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
+       $myusername = mysqli_real_escape_string($conn,$_POST['Username']);
+       $mypassword = mysqli_real_escape_string($conn,$_POST['Password']);
+
+       $sql = "SELECT customer_id FROM customer WHERE customer_login = '$myusername' and customer_password = '$mypassword'";
+       $result = $conn->query($sql);
+
+       $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+       $count = mysqli_num_rows($result);
+
+       // If result matched $myusername and $mypassword, table row must be 1 row
+
+       if($count == 1) {
+				 $_SESSION['logged']=true;
+	 		 	 $_SESSION['username']=$myusername;
+          header("location: index.php");
+    			exit();
+       }else {
+           $_SESSION['logged']=false;
+					$errormsg = "Incorrect username or Password";
+					exit();
+       }
+	}
+
+?>
+<!-- header -->
+<?php include ("header.php") ; ?>
 <!-- //header -->
 <!-- products-breadcrumb -->
 	<div class="products-breadcrumb">
@@ -200,11 +153,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  </div>
 				  <div class="form">
 					<h2>Login to your account</h2>
-					<form action="php/login.php" method="post">
+					<form action="login.php" method="post">
 					  <input type="text" name="Username" placeholder="username" required=" ">
 					  <input type="password" name="Password" placeholder="password" required=" ">
-					  <input type="submit" value="Login">
+					  <input type="submit" value="Login"> <br />
+						<br/>
+						<span><?php
+						$reasons = array("password" => "Wrong Username or Password", "blank" => "");
+						if (isset($errormsg))
+							echo $errormsg;
+						 ?></span>
 					</form>
+
+
 				  </div>
 				  <div class="form">
 					<h2>Create an account</h2>
@@ -241,37 +202,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="clearfix"></div>
 	</div>
 <!-- //banner -->
-<!-- newsletter-top-serv-btm -->
-	<div class="newsletter-top-serv-btm">
-		<div class="container">
-			<div class="col-md-4 wthree_news_top_serv_btm_grid">
-				<div class="wthree_news_top_serv_btm_grid_icon">
-					<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-				</div>
-				<h3>Nam libero tempore</h3>
-				<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
-					saepe eveniet ut et voluptates repudiandae sint et.</p>
-			</div>
-			<div class="col-md-4 wthree_news_top_serv_btm_grid">
-				<div class="wthree_news_top_serv_btm_grid_icon">
-					<i class="fa fa-bar-chart" aria-hidden="true"></i>
-				</div>
-				<h3>officiis debitis aut rerum</h3>
-				<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
-					saepe eveniet ut et voluptates repudiandae sint et.</p>
-			</div>
-			<div class="col-md-4 wthree_news_top_serv_btm_grid">
-				<div class="wthree_news_top_serv_btm_grid_icon">
-					<i class="fa fa-truck" aria-hidden="true"></i>
-				</div>
-				<h3>eveniet ut et voluptates</h3>
-				<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
-					saepe eveniet ut et voluptates repudiandae sint et.</p>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
-<!-- //newsletter-top-serv-btm -->
 <!-- newsletter -->
 	<div class="newsletter">
 		<div class="container">
@@ -337,5 +267,6 @@ $(document).ready(function(){
 		paypal.minicart.reset();
 	}
 </script>
+
 </body>
 </html>
