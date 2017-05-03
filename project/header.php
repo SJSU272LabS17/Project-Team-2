@@ -1,4 +1,9 @@
 <!-- header -->
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+	 session_start();
+ }
+?>
 	<div class="agileits_header">
 		<div class="w3l_offers">
 			<a href="products.php">Today's special Offers !</a>
@@ -18,24 +23,52 @@
                 </fieldset>
             </form>
 		</div>
-		<div class="w3l_header_right">
-			<ul>
-				<li class="dropdown profile_details_drop">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
+		<?php
+		if(isset($_SESSION['logged']) && $_SESSION['logged']==true)
+			{ echo '<span class=login_user>';
+				//echo $_SESSION["username"];
+				echo '</span>';
+				//echo '<a href="logout.php"><span class="login_user">Logout</span></a></li>';
+			?>
+			<div class="w3l_header_right">
+				<ul>
+					<li class="dropdown profile_details_drop">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION["username"]; ?><span class="caret"></span></a>
 					<div class="mega-dropdown-menu">
 						<div class="w3ls_vegetables">
-							<ul class="dropdown-menu drp-mnu">
-								<li><a href="login.php">Login</a></li>
-								<li><a href="login.php">Sign Up</a></li>
-							</ul>
+								<ul class="dropdown-menu drp-mnu">
+									<li><a href="orders.php">Orders</a></li>
+									<li><a href="wishlist.php">Wishlist</a></li>
+								</ul>
+							</div>
 						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="w3l_header_right1">
-			<h2><a href="mail.php">Contact Us</a></h2>
-		</div>
+					</li>
+				</ul>
+			</div>
+			<div class="w3l_header_right1" >
+				<a href="php/logout.php" style="color:white;padding:10px 90px 10px 20px ;float:left;" >logout</a>
+			</div>
+			<?php
+			}
+			else
+			{ ?>
+			<div class="w3l_header_right">
+				<ul>
+					<li class="dropdown profile_details_drop">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
+						<div class="mega-dropdown-menu">
+							<div class="w3ls_vegetables">
+								<ul class="dropdown-menu drp-mnu">
+									<li><a href="login.php">Login</a></li>
+									<li><a href="login.php">Sign Up</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+  		<?php } ?>
+
 		<div class="clearfix"> </div>
 	</div>
 <!-- script-for sticky-nav -->
