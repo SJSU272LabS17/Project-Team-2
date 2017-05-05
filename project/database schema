@@ -48,15 +48,13 @@ CREATE TABLE `corder` (
 
 CREATE TABLE `customer` (
   `customer_id` int(20) UNSIGNED NOT NULL,
-  `customer_firstname` varchar(20) NOT NULL,
-  `customer_lastname` varchar(20) NOT NULL,
+  `customer_name` varchar(20) DEFAULT NULL,
   `customer_email` varchar(30) NOT NULL,
   `customer_address` varchar(30) DEFAULT NULL,
   `customer_city` varchar(20) DEFAULT NULL,
   `customer_zipcode` int(10) UNSIGNED DEFAULT NULL,
   `customer_state` varchar(15) DEFAULT NULL,
-  `customer_mobile` bigint(20) UNSIGNED,
-  `customer_login` varchar(20) NOT NULL,
+  `customer_mobile` bigint(20) UNSIGNED DEFAULT NULL,
   `customer_password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
