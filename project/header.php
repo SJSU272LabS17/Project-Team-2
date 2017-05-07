@@ -33,7 +33,7 @@ if (session_status() == PHP_SESSION_NONE) {
 			<div class="w3l_header_right">
 				<ul>
 					<li class="dropdown profile_details_drop">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION["username"]; ?><span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Hi,<?php echo $_SESSION["username"]; ?><span class="caret"></span></a>
 					<div class="mega-dropdown-menu">
 						<div class="w3ls_vegetables">
 								<ul class="dropdown-menu drp-mnu">
