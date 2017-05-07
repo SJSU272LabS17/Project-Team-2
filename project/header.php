@@ -11,7 +11,7 @@ if (session_status() == PHP_SESSION_NONE) {
 				<input type="submit" value=" ">
 			</form>
 		</div>
-		<div class="product_list_header">
+		<!--div class="product_list_header">
 			<form action="#" method="post" class="last">
                 <fieldset>
                     <input type="hidden" name="cmd" value="_cart" />
@@ -19,7 +19,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     <input type="submit" name="submit" value="View your cart" class="button" />
                 </fieldset>
             </form>
-		</div>
+		</div-->
 		<?php
 		if(isset($_SESSION['logged']) && $_SESSION['logged']==true)
 			{ echo '<span class=login_user>';
@@ -52,7 +52,7 @@ if (session_status() == PHP_SESSION_NONE) {
 			<div class="w3l_header_right">
 				<ul>
 					<li class="dropdown profile_details_drop">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Customer <i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
 						<div class="mega-dropdown-menu">
 							<div class="w3ls_vegetables">
 								<ul class="dropdown-menu drp-mnu">
@@ -64,8 +64,25 @@ if (session_status() == PHP_SESSION_NONE) {
 					</li>
 				</ul>
 			</div>
-		<a href= "../homepage/vendorsignup.html" class="vendor" style=" color:white;padding:10px 90px 10px 20px ;float:left;">Vendor</a>
-  		<?php } ?>
+
+			<div class="w3l_header_right" style = "padding-right: 2em">
+				<ul>
+					<li class="dropdown profile_details_drop">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Vendor <i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
+						<div class="mega-dropdown-menu">
+							<div class="w3ls_vegetables">
+								<ul class="dropdown-menu drp-mnu">
+									<li><a href="login.php">Login</a></li>
+									<li><a href="login.php">Sign Up</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+  		
+		  
+		  <?php } ?>
 
 		<div class="clearfix"> </div>
 	</div>
