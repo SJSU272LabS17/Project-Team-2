@@ -92,7 +92,7 @@ if (session_status() == PHP_SESSION_NONE) {
 			</div>
 			<div class="w3ls_logo_products_left1">
 				<ul class="special_items">
-					<li><a href="products.php">Events</a><i>/</i></li>
+					<li><a href="products.php">Products</a><i>/</i></li>
 					<li><a href="about.php">About Us</a></li>
 					<!--li><a href="products.php">Best Deals</a><i>/</i></li>
 					<li><a href="services.php">Services</a></li-->
