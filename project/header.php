@@ -5,9 +5,6 @@ if (session_status() == PHP_SESSION_NONE) {
  }
 ?>
 	<div class="agileits_header">
-		<div class="w3l_offers">
-			<a href="products.php">Today's special Offers !</a>
-		</div>
 		<div class="w3l_search">
 			<form action="#" method="post">
 				<input type="text" name="Product" value="Search a product..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search a product...';}" required="">
@@ -91,20 +88,20 @@ if (session_status() == PHP_SESSION_NONE) {
 	<div class="logo_products">
 		<div class="container">
 			<div class="w3ls_logo_products_left">
-				<h1><a href="index.php"><span>Grocery</span> Store</a></h1>
+				<h1><a href="index.php"><span>Grocery</span> Bargain</a></h1>
 			</div>
 			<div class="w3ls_logo_products_left1">
 				<ul class="special_items">
-					<li><a href="events.php">Events</a><i>/</i></li>
-					<li><a href="about.php">About Us</a><i>/</i></li>
-					<li><a href="products.php">Best Deals</a><i>/</i></li>
-					<li><a href="services.php">Services</a></li>
+					<li><a href="products.php">Events</a><i>/</i></li>
+					<li><a href="about.php">About Us</a></li>
+					<!--li><a href="products.php">Best Deals</a><i>/</i></li>
+					<li><a href="services.php">Services</a></li-->
 				</ul>
 			</div>
 			<div class="w3ls_logo_products_left1">
 				<ul class="phone_email">
-					<li><i class="fa fa-phone" aria-hidden="true"></i>(+0123) 234 567</li>
-					<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:store@grocery.com">store@grocery.com</a></li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i>(+0123) 456 789</li>
+					<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:store@grocerybargain.com">store@grocerybargain.com</a></li>
 				</ul>
 			</div>
 			<div class="clearfix"> </div>
