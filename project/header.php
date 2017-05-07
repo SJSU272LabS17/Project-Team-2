@@ -67,6 +67,7 @@ if (session_status() == PHP_SESSION_NONE) {
 					</li>
 				</ul>
 			</div>
+		<a href= "vendor.php" class="vendor" style=" color:white;padding:10px 90px 10px 20px ;float:left;">Vendor</a>
   		<?php } ?>
 
 		<div class="clearfix"> </div>
