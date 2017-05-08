@@ -93,7 +93,54 @@
 		<div class="clearfix"></div>
 	</div>
 <!-- banner -->
-<div>
+<div class="container">
+  <div id="products" class="row list-group">
+		<h2 class="text-left" style="padding:20px;">Fruits</h2>
+		<?php
+		include_once("php/dbconnect.php");
+	  $sql = "SELECT * from product;";
+		$result = $conn->query($sql);
+
+		if ($result=mysqli_query($conn,$sql))
+  	{
+  // Fetch one and one row
+  	while ($product=mysqli_fetch_assoc($result))
+    	{ ?>
+			<div class="item  col-xs-3 col-lg-3">
+				<div class="thumbnail">
+					<img  class="group list-group-image" src=<?= $product['product_image'] ?> alt= <?= $product['product_name'] ?> width=400px height=250px; />
+					<div class="caption">
+						 <h4 class="group inner list-group-item-heading"><?= $product['product_name'] ?></h4>
+						 <div class="row">
+                <div class="col-xs-12 col-md-2">
+                  <p class="list-price text-danger"><s>$<?= $product['product_price'] ?></s> </p>
+								</div>
+								<div class="col-xs-12 col-md-4">
+						 			<p class="price">
+									<?php $discount= $product['product_price']*($product['product_discount']/100);
+									$newprice = number_format(($product['product_price']-$discount),2,'.',' '); ?>
+									$<?= $newprice ?>
+									</p>
+								</div>
+								<div class="col-xs-12 col-md-6">
+									<p class="discount" style="color:green">Save <?= $product['product_discount'] ?> %</p>
+							</div>
+						</div>
+						<hr />
+						<div class="row">
+              <div class="col-xs-12 col-md-6">
+                <button type = "button" class = "btn btn-success" data-toggle="modal" data-target="Details-1">Details</button>
+ 							</div>
+ 							<div class="col-xs-12 col-md-6">
+ 						 		<button type = "button" class = "btn btn-info" data-toggle="modal" data-target="Details-1">Add To Cart</button>
+ 							</div>
+ 						</div>
+					</div>
+				</div>
+			</div>
+			<?php }
+		} ?>
+	</div>
 
 </div>
 
@@ -103,6 +150,12 @@ include_once("footer.php");
 ?>
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+<!-- script for the product display-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
+    $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
+});
 <script>
 $(document).ready(function(){
     $(".dropdown").hover(
