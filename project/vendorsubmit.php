@@ -32,7 +32,7 @@ VALUES ('$firstname', '$lastname', '$email', '$address', '$city', '$zipcode', '$
 
 if ($conn->query($sql) === TRUE) {
     echo "Thank you for signing up to be a vendor on Grocery bargain, you are now being directed to the inventory page";
-   header('Location: images.html');    
+   header('Location: vendorinventory.php');    
     
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;

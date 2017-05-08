@@ -26,8 +26,8 @@ $login = $_POST["login"];
 $password = $_POST["password"];
 
 
-$sql = "INSERT INTO customer (customer_id, customer_firstname, customer_lastname, customer_email, customer_address, customer_city, customer_zipcode, customer_state, customer_phonenumber, customer_login, customer_password)
-VALUES ('1', '$firstname', '$lastname', '$email', '$address', '$city', '$zipcode', '$state', '$mobile', '$login', '$password')";
+$sql = "INSERT INTO customer (customer_firstname, customer_lastname, customer_email, customer_address, customer_city, customer_zipcode, customer_state, customer_phonenumber, customer_login, customer_password)
+VALUES ('$firstname', '$lastname', '$email', '$address', '$city', '$zipcode', '$state', '$mobile', '$login', '$password')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Thank you for signing up with Grocery online, please take a look at our products page";
