@@ -39,7 +39,7 @@ CREATE TABLE `corder` (
 --
 
 CREATE TABLE `customer` (
-  `customer_id` int(200) UNSIGNED NOT NULL,
+  `customer_id` int(200) NOT NULL,
   `customer_firstname` varchar(20) NOT NULL,
   `customer_lastname` varchar(20) NOT NULL,
   `customer_email` varchar(300) NOT NULL,
@@ -57,7 +57,7 @@ CREATE TABLE `customer` (
 --
 
 CREATE TABLE `product` (
-  `product_id` int(20) UNSIGNED NOT NULL,
+  `product_id` int(20) NOT NULL,
   `product_name` varchar(20) NOT NULL,
   `product_category` varchar(20) NOT NULL,
   `product_price` float(3,2) NOT NULL,
@@ -79,14 +79,15 @@ CREATE TABLE `product` (
 --
 
 CREATE TABLE `seller` (
-  `seller_id` int(20) UNSIGNED NOT NULL,
+  `seller_id` int(20) NOT NULL,
   `seller_businessname` varchar(100) NOT NULL,
-  `seller_ownername` varchar(100) NOT NULL
-  `seller_area` varchar(100) DEFAULT NULL,
+  `seller_firstname` varchar(100) NOT NULL,
+  `seller_lastname` varchar(100) NOT NULL,
   `seller_address` varchar(100),
   `seller_city` varchar(100),
   `seller_state` varchar(100),
   `seller_zipcode` int(100),
+  `seller_phonenumber` int(100),
   `seller_email` varchar(100),
   `seller_login` varchar(100) NOT NULL,
   `seller_password` varchar(100) NOT NULL
@@ -162,7 +163,7 @@ ALTER TABLE `corder`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `customer_id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `customer_id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `product`
 --
