@@ -32,11 +32,11 @@
 						</div>		
 						<div class="row">
 							<div class="col-sm-6 form-group">
-								<label>First Name</label>
+								<label>Business Name</label>
 								<input type="text" placeholder="Enter First Name Here.." name="firstname" class="form-control">
 							</div>
 							<div class="col-sm-6 form-group">
-								<label>Last Name</label>
+								<label>Owner</label>
 								<input type="text" placeholder="Enter Last Name Here.." name = "lastname " class="form-control">
 							</div>
 						</div>					

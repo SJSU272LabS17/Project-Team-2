@@ -24,7 +24,7 @@
   <div class="container">
 
       <form class="form-signin">
-		  <h4 class="form-signin-heading">Customer Sign In</h4>
+		  <h4 class="form-signin-heading">Vendor Sign In</h4>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>

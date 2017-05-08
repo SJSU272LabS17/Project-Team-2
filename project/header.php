@@ -73,7 +73,7 @@ if (session_status() == PHP_SESSION_NONE) {
 							<div class="w3ls_vegetables">
 								<ul class="dropdown-menu drp-mnu">
 									<li><a href="vendorlogin.php">Login</a></li>
-									<li><a href="login.php">Sign Up</a></li>
+									<li><a href="vendorsignup.php">Sign Up</a></li>
 								</ul>
 							</div>
 						</div>

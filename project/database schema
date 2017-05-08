@@ -80,15 +80,16 @@ CREATE TABLE `product` (
 
 CREATE TABLE `seller` (
   `seller_id` int(20) UNSIGNED NOT NULL,
-  `seller_name` varchar(20) NOT NULL,
-  `seller_area` varchar(20) DEFAULT NULL,
-  `seller_address` varchar(20),
-  `seller_city` varchar(20),
-  `seller_state` varchar(15),
-  `seller_zipcode` int(10),
-  `seller_email` varchar(30),
-  `seller_login` varchar(20) NOT NULL,
-  `seller_password` varchar(20) NOT NULL
+  `seller_businessname` varchar(100) NOT NULL,
+  `seller_ownername` varchar(100) NOT NULL
+  `seller_area` varchar(100) DEFAULT NULL,
+  `seller_address` varchar(100),
+  `seller_city` varchar(100),
+  `seller_state` varchar(100),
+  `seller_zipcode` int(100),
+  `seller_email` varchar(100),
+  `seller_login` varchar(100) NOT NULL,
+  `seller_password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
