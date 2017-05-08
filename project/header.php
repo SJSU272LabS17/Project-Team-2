@@ -109,15 +109,15 @@ if (session_status() == PHP_SESSION_NONE) {
 			</div>
 			<div class="w3ls_logo_products_left1">
 				<ul class="special_items">
-					<li><a href="products.php">Products</a><i>/</i></li>
-					<li><a href="about.php">About Us</a></li>
+					<li><a href="images.html">Products</a><i>/</i></li>
+					<li><a href="homepage.html">About Us</a></li>
 					<!--li><a href="products.php">Best Deals</a><i>/</i></li>
 					<li><a href="services.php">Services</a></li-->
 				</ul>
 			</div>
 			<div class="w3ls_logo_products_left1">
 				<ul class="phone_email">
-					<li><i class="fa fa-phone" aria-hidden="true"></i>(+0123) 456 789</li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i>(408)456 7891</li>
 					<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:store@grocerybargain.com">store@grocerybargain.com</a></li>
 				</ul>
 			</div>
