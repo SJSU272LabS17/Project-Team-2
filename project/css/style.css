@@ -21,7 +21,7 @@ html, body{
     padding: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    border-radius: 0px;
+    border-radius: 10px;
 }
 
 .item.list-group-item
