@@ -20,61 +20,50 @@
 	<div class="row">
 				<form action="vendorsubmit.php" method = "POST">
 					<div class="col-sm-12">
-							<div class="row">
+            <div class="row">
 							<div class="col-sm-6 form-group">
-								<label>Username</label>
-								<input type="text" placeholder="Enter Your User Name Here.." name="login" class="form-control">
+								<label>Seller Name</label>
+								<input type="text" placeholder="Enter Seller Name Here.." name="sellername" class="form-control">
 							</div>
+						</div>
+							<div class="row">
 							<div class="col-sm-6 form-group">
 								<label>Password</label>
 								<input type="password" placeholder="Enter Your Password Here.." name = "password " class="form-control">
 							</div>
-						</div>		
-						<div class="row">
-							<div class="col-sm-6 form-group">
-								<label>First Name</label>
-								<input type="text" placeholder="Enter First Name Here.." name="firstname" class="form-control">
-							</div>
-							<div class="col-sm-6 form-group">
-								<label>Last Name</label>
-								<input type="text" placeholder="Enter Your Full Name Here.." name = "lastname " class="form-control">
-							</div>
-						</div>					
+						</div>
+            <div class="form-group">
+  						<label>Email Address</label>
+  						<input type="text" placeholder="Enter Email Address Here.." name = "email" class="form-control">
+  					</div>
 						<div class="form-group">
 							<label>Address</label>
 							<textarea placeholder="Enter Your Address Here.." rows="3" name = "address" class="form-control"></textarea>
-						</div>	
+						</div>
 						<div class="row">
 							<div class="col-sm-4 form-group">
 								<label>City</label>
 								<input type="text" placeholder="Enter City Name Here.." name = "city" class="form-control">
-							</div>	
+							</div>
 							<div class="col-sm-4 form-group">
 								<label>State</label>
 								<input type="text" placeholder="Enter State Name Here.." name = "state" class="form-control">
-							</div>	
+							</div>
 							<div class="col-sm-4 form-group">
 								<label>Zip</label>
 								<input type="text" placeholder="Enter Zip Code Here.." name = "zipcode" class="form-control">
-							</div>		
+							</div>
 						</div>
 						<div class="row"></div>
-					<div class="form-group">
-						<label>Bussiness Name</label>
-						<input type="text" placeholder="Enter Your Business Name Here.." name = "businessname" class="form-control">
-					</div>
-					
+
 					<div class="form-group">
 						<label>Phone Number</label>
-						<input type="text" placeholder="Enter Phone Number Here.." name = "phonenumber" class="form-control">
-					</div>		
-					<div class="form-group">
-						<label>Email Address</label>
-						<input type="text" placeholder="Enter Email Address Here.." name = "email" class="form-control">
-					</div>	
-					<button type="submit" class="btn btn-lg btn-info" value ="Submit">Submit</button>					
+						<input type="text" placeholder="Enter Phone Number Here.." name = "phonenumber" class="form-control" maxlength="10">
 					</div>
-				</form> 
+
+					<button type="submit" class="btn btn-lg btn-info" value ="Submit">Submit</button>
+					</div>
+				</form>
 				</div>
 	</div>
 	</div>
