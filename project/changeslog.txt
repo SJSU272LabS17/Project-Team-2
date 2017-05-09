@@ -1,1 +1,2 @@
 update all your change logs here..
+fixed the errors for index.php page
