@@ -1,3 +1,4 @@
+
 <?php
    // DB deployed in AWS cloud using RDS service.
    define('DB_SERVER', 'grocerybargain.cavbzzgm6wkd.us-west-1.rds.amazonaws.com');
@@ -5,6 +6,12 @@
    define('DB_PASSWORD', 'master123');
    define('DB_DATABASE', 'grocery_db');
    $conn = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+   /*
+   Days_to_expire    ->   Increase_in_Discount_per_day
+        1                           15%
+      2 to 4                         5% 
+      5 to 8                         2%  
+   */
    $query1="update product set product_discount = product_discount + 15 
 where product_sell_by_date = curdate()+1 
 and dynamic_pricing_flag = 'Y'
