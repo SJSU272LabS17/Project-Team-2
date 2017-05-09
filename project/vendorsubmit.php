@@ -1,40 +1,40 @@
+ <?php session_start(); ?>
+
 <html>
 <body>
-
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "killing";
-$dbname = "grocery";
+include_once("php/dbconnect.php");
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
-$firstname = $_POST["firstname"];
-$lastname = $_POST["lastname"];
-$email = $_POST["email"];
-$address = $_POST["address"];
-$city = $_POST["city"];
-$zipcode= $_POST["zipcode"];
-$state = $_POST["state"];
-$businessname = $_POST["businessname"];
-$phonenumber = $_POST["phonenumber"];
-$login = $_POST["login"];
-$password = $_POST["password"];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $sellername = $_POST["sellername"];
+  $password = $_POST["password"];
+  $email = $_POST["email"];
+  $address = $_POST["address"];
+  $city = $_POST["city"];
+  $zipcode= $_POST["zipcode"];
+  $state = $_POST["state"];
+  $phonenumber = $_POST["phonenumber"];
+}
 
 
-$sql = "INSERT INTO seller (seller_firstname, seller_lastname, seller_email, seller_address, seller_city, seller_zipcode, seller_state, seller_businessname, seller_phonenumber, seller_login, seller_password)
-VALUES ('$firstname', '$lastname', '$email', '$address', '$city', '$zipcode', '$state', '$businessname', '$phonenumber', '$login', '$password')";
+$sql = mysqli_query($conn,"SELECT seller_id FROM seller WHERE seller_email='$email' LIMIT 1");
+$userMatch = mysqli_num_rows($sql);
+  if ($userMatch > 0) {
+  echo 'Sorry an account is already associated with this email,to Login, <a href="vendorlogin.php">click here</a>';
+  exit();
+}
+
+$sql = "INSERT INTO seller (seller_name, seller_email, seller_address, seller_city, seller_zipcode, seller_state,  seller_password, seller_phonenumber)
+VALUES ('$sellername', '$email', '$address', '$city', '$zipcode', '$state', '$password', '$phonenumber')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Thank you for signing up to be a vendor on Grocery bargain, you are now being directed to the inventory page";
-   header('Location: vendorinventory.php');    
-    
+  $_SESSION['logged']=true;
+  $_SESSION['sellername']=$username;
+  $_SESSION['email'] = $email;
+   header('Location: vendorinventory.php');
+
 } else {
+    $_SESSION['logged']=false;
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
