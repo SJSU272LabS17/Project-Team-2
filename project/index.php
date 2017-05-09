@@ -1,8 +1,8 @@
--<? php
- -if (session_status() == PHP_SESSION_NONE) {
- -	 session_start();
- - ?>
- -<!DOCTYPE html>
+<? php
+ if (session_status() == PHP_SESSION_NONE) {
+ 	 session_start();
+  ?>
+ <!DOCTYPE html>
 <html>
 <head>
 <title>Grocery Bargain</title>
@@ -108,7 +108,7 @@
     	{ ?>
 			<div class="item  col-xs-3 col-lg-3">
 				<div class="thumbnail">
-					<img  class="group list-group-image" src=<?= $product['product_image'] ?> alt= <?= $product['product_name'] ?> width=400px height=250px; />
+					<img class="img-rounded" src=<?= $product['product_image'] ?> alt= <?= $product['product_name'] ?> width=400px height=250px; />
 					<div class="caption">
 						 <h4 class="group inner list-group-item-heading"><?= $product['product_name'] ?></h4>
 						 <div class="row">
@@ -156,6 +156,7 @@ $(document).ready(function() {
     $('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
     $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
 });
+</script>
 <script>
 $(document).ready(function(){
     $(".dropdown").hover(
