@@ -1,9 +1,4 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
+
 html, body{
     font-size: 100%;
 	font-family: 'Open Sans', sans-serif;
@@ -72,6 +67,11 @@ html, body{
     margin: 0 0 11px;
 }
 /*for products display grid-end*/
+/*for product detail page */		
+.add-to-cart .btn-qty {		
+  width: 22px;		
+  height: 26px;		
+}
 ul li,ol li{
 	font-size:14px;
 }
@@ -900,40 +900,6 @@ ul.dropdown-menu.drp-mnu li a i {
 	padding:1.5em 0;
 	background:#11733e;;
 }
-.w3_footer_grid h3{
-	font-size:1.2em;
-	color:#fff;
-	text-transform:uppercase;
-	margin-bottom:2em;
-}
-.w3_footer_grid ul.w3_footer_grid_list li{
-	list-style-type: none;
-    margin-bottom: 1.5em;
-    padding-left: 2em;
-    background: url(../images/img-sp.png) no-repeat -14px -193px;
-}
-.w3_footer_grid ul.w3_footer_grid_list li a{
-	color:#999;
-	text-decoration:none;
-	text-transform:capitalize;
-}
-.w3_footer_grid ul.w3_footer_grid_list li a:hover{
-	color:#fff;
-}
-.agile_footer_grids{
-	padding:1em 0 0;
-}
-.w3_footer_grid_bottom h4,.w3_footer_grid_bottom h5{
-	text-transform:capitalize;
-	font-size:1em;
-	margin-bottom:1em;
-}
-.w3_footer_grid_bottom h4{
-	color:#84C639;
-}
-.w3_footer_grid_bottom h5{
-	color:#fff;
-}
 .agileits_social_icons li{
 	display:inline-block;
 }
@@ -1063,7 +1029,7 @@ ul.dropdown-menu.drp-mnu li a i {
 	color:#FA1818;
 }
 .products-breadcrumb ul li i {
-    padding-right: 1em;
+    padding-right: 0em;
 	color:#FA1818;
 }
 /*-- //products-breadcrumb --*/
@@ -3319,9 +3285,6 @@ ul.wmuSliderPagination {
 	.more {
 		margin-left: 29.5em;
 	}
-	.footer {
-		padding: 3em 0;
-	}
 	.wthree_footer_copy {
 		margin: 3em 0 0;
 		padding: 2.5em 0 0;
@@ -3582,9 +3545,6 @@ ul.wmuSliderPagination {
 	}
 	.w3agile_newsletter_right input[type="email"] {
 		width: 68%;
-	}
-	.footer {
-		padding: 2em 0;
 	}
 	.w3_footer_grid {
 		float: none;
