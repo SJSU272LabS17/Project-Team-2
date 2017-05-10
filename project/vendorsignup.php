@@ -18,7 +18,7 @@
     <h1 class="well">Vendor Sign Up</h1>
 	<div class="col-lg-12 well">
 	<div class="row">
-				<form action="vendorsubmit.php" method = "POST">
+<form action="vendorsubmit.php" method = "POST">
 					<div class="col-sm-12">
             <div class="row">
 							<div class="col-sm-6 form-group">

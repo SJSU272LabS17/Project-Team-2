@@ -1,2 +1,11 @@
 update all your change logs here..
 fixed the errors for index.php page
+
+
+
+added inventorysubmit.php (please help me check and modify the function to insert into the correct product table)
+added tabs for different types of groceies
+updated vendorinventory
+added fruits.php
+added veggies.php
+added snacks.php
