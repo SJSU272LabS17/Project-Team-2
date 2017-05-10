@@ -21,171 +21,22 @@
   <?php
   	include_once("vendorheader.php");
   ?>
-<div class="container">
-  <h2>Vendory Inventory</h2>
+    <h2>Vendory Inventory</h2>
   <p>Please click on each of the product below and tell us the inventory you have</p>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../images/asianperl.jpg" target="_blank">
-          <img src="../images/asianperl.jpg" alt="Lights" style="width:100%">
-          <div class="caption">
-            <p align="center">Asian Pearl</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
-          <img src="../images/blackberries.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p align="center">Black Berries</p>
-          </div>
-        </a>
-
-  <div id="theModal" class="modal fade">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-      </div>
-    </div>
+<div position="relative">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#fruits" aria-controls="fruits" role="tab" data-toggle="tab">Fruits</a></li>
+    <li role="presentation"><a href="#veggies" aria-controls="veggies" role="tab" data-toggle="tab">Vegetables</a></li>
+    <li role="presentation"><a href="#snacks" aria-controls="snacks" role="tab" data-toggle="tab">Snacks</a></li>
+  </ul>
+	</div>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="fruits"><iframe src="fruits.php" height="1080" width="1920"></iframe></div>
+    <div role="tabpanel" class="tab-pane active" id="veggies"><iframe src="veggies.php" height="1080" width="1920"></iframe></div>
+      <div role="tabpanel" class="tab-pane active" id="snacks"><iframe src="snacks.php" height="1080" width="1920"></iframe></div>
+      
   </div>
-      </div>
 
-  </div>
-  
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../images/cantaloupe.jpg" target="_blank">
-          <img src="../images/cantaloupe.jpg" alt="Nature" style="width:100%">
-          <div class="caption">
-            <p align="center">Cantaloupe</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../images/coconut.jpg" target="_blank">
-          <img src="../images/coconut.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p align="center">Coconut</p>
-          </div>
-        </a>
-      </div>
-    </div>
-        <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../images/grapefruit.jpg" target="_blank">
-          <img src="../images/grapefruit.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p align="center">Grapefruit</p>
-          </div>
-        </a>
-      </div>
-    </div>
-        <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../images/greenapple.jpg" target="_blank">
-          <img src="../images/greenapple.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p align="center">Greenapple</p>
-          </div>
-        </a>
-      </div>
-    </div>
-        <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../images/honeydew.jpg" target="_blank">
-          <img src="../images/honeydew.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p align="center">Honeydew</p>
-          </div>
-        </a>
-      </div>
-    </div>
-        <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../images/kiwi.jpg" target="_blank">
-          <img src="../images/kiwi.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p align="center">Kiwi</p>
-          </div>
-        </a>
-      </div>
-    </div>
-        <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../images/opalapple.jpg" target="_blank">
-          <img src="../images/opalapple.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p align="center">Opal Apple</p>
-          </div>
-        </a>
-      </div>
-    </div>
-        <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../images/oranges.jpg" target="_blank">
-          <img src="../images/oranges.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p align="center">Oranges</p>
-          </div>
-        </a>
-      </div>
-    </div>
-        <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../images/pearl.jpg" target="_blank">
-          <img src="../images/pearl.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p align="center">Pearl</p>
-          </div>
-        </a>
-      </div>
-    </div>
-      <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../images/rasberries.jpg" target="_blank">
-          <img src="../images/rasberries.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p align="center">Rasberries</p>
-          </div>
-        </a>
-      </div>
-    </div>
-        <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../images/redapple.jpg" target="_blank">
-          <img src="../images/redapple.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p align="center">Red Apple</p>
-          </div>
-        </a>
-      </div>
-    </div>
-            <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../images/snowmelon.jpg" target="_blank">
-          <img src="../images/snowmelon.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p align="center">Snow Melon</p>
-          </div>
-        </a>
-      </div>
-    </div>
-            <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="../images/strawberries.jpg" target="_blank">
-          <img src="../images/strawberries.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p align="center">Strawberries</p>
-          </div>
-        </a>
-      </div>
-    </div>
-
-  </div>
 </div>
 <script>
 $(document).ready(function(){
