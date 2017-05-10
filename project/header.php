@@ -83,6 +83,37 @@ if (session_status() == PHP_SESSION_NONE) {
   		
 		  
 		  <?php } ?>
+		<?php
+			if($_SERVER['REQUEST_METHOD'] == "POST"){
+				$location =  $_POST['Location'];
+				if($location!= null){
+					setcookie("location",$location,0 , "/");
+					header('Location:'.$_SERVER['PHP_SELF']);
+					exit();
+				}
+			}
+			?>
+			<div class="w3l_header_right" style = "padding-right: 0px">
+				<ul>
+					<li class="dropdown" id="menuLogin" style="padding:10px;">
+             <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="Location" style="color:white">Location<i class="fa fa-map-marker" aria-hidden="true"></i><span class="caret"></span></a>
+
+						 <div class="dropdown-menu" style="padding:17px;">
+               <form class="form" method="post" id="formLogin">
+								 <label>Zipcode</label>
+                 <input name="Location" id="Location" type="text" placeholder="5 digit zipcode" style="margin-top:5px;">
+                 <button type="submit" class="btn btn-primary" style="margin-top:10px;">set</button>
+               </form>
+             </div>
+           </li>
+				</ul>
+			</div>
+			<div class="location value" style = "padding: 10px;color:white">
+				<?php
+				if(isset($_COOKIE['location'])){ ?>
+					<p><span><font size=3px ><?= $_COOKIE['location'] ?></font></span></p>
+				<?php } ?>
+			</div>
 
 		<div class="clearfix"> </div>
 	</div>
