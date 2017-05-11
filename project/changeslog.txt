@@ -1,5 +1,8 @@
 update all your change logs here..
+
 fixed the errors for index.php page
+
+
 
 
 
@@ -7,5 +10,8 @@ added inventorysubmit.php (please help me check and modify the function to inser
 added tabs for different types of groceies
 updated vendorinventory
 added fruits.php
+
 added veggies.php
 added snacks.php
+
+added products and products details page
