@@ -18,11 +18,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <?php
+  	include_once("vendorheader.php");
+  ?>
 <div class="container">
   <div class="row">
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
           <img src="../images/seasaltchip.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Sea Salt Chips</p>
@@ -41,7 +44,7 @@
     
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
           <img src="../images/brownricechips.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Brown Rice Chips</p>
@@ -60,7 +63,7 @@
   
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
           <img src="../images/chocolatechip.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Chocolate Chips</p>
@@ -79,7 +82,7 @@
    
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
           <img src="../images/veggieschips.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Veggies Chips</p>
@@ -98,7 +101,7 @@
        
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
           <img src="../images/wheatcrackers.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Wheat Crackers</p>
@@ -118,7 +121,7 @@
        
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
           <img src="../images/beefproteinbar.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Beef Protein Bar</p>
@@ -137,7 +140,7 @@
        
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
           <img src="../images/darkchocolate.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Dark Chocolate</p>

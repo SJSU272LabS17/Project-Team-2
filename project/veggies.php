@@ -18,11 +18,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <?php
+  	include_once("vendorheader.php");
+  ?>
 <div class="container">
   <div class="row">
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
           <img src="../images/brocolli.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Brocolli</p>
@@ -41,7 +44,7 @@
     
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
           <img src="../images/kale.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Kale</p>
