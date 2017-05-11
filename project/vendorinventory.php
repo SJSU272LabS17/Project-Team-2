@@ -19,8 +19,9 @@
 </head>
 <body>
   <?php
-  	include_once("vendorheader.php");
+        include_once("vendorheader.php");
   ?>
+
     <h2>Vendory Inventory</h2>
   <p>Please click on each of the product below and tell us the inventory you have</p>
 <div position="relative">
