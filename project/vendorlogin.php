@@ -51,13 +51,13 @@
 
       // If result matched $myusername and $mypassword, table row must be 1 row
            if($count == 1) {
-    				 $_SESSION['logged']=true;
+    				 $_SESSION['vendorlogged']=true;
              $_SESSION['sellername']=$username[0];
              $_SESSION['selleremail'] = $myuseremail;
              header("location: vendorinventory.php");
         			exit();
            }else {
-               $_SESSION['logged']=false;
+               $_SESSION['vendorlogged']=false;
     					$errormsg = "Incorrect username or Password";
     					exit();
            }
