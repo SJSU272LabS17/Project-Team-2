@@ -97,7 +97,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 <!-- //products-breadcrumb -->
 <!-- banner -->
-	<?php include
 		<div class="w3l_banner_nav_right">
 <!-- login -->
 		<div class="w3_login">
