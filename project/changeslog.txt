@@ -15,3 +15,5 @@ added veggies.php
 added snacks.php
 
 added products and products details page
+
+modify vendorinventorypage.php

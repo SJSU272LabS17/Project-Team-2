@@ -18,9 +18,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <?php
-  	include_once("vendorheader.php");
-  ?>
 <div class="container">
   <div class="row">
   <div class="col-md-4">
@@ -63,7 +60,7 @@
   
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
           <img src="../images/spinach.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Spinach</p>
@@ -82,7 +79,7 @@
    
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
           <img src="../images/tomatoes.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Tomatoes</p>
@@ -101,7 +98,7 @@
        
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
           <img src="../images/lettuce.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Lettuce</p>
@@ -121,7 +118,7 @@
        
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
           <img src="../images/onion.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Onion</p>
@@ -140,7 +137,7 @@
        
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventorytest.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
           <img src="../images/mushroom.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Mushroom</p>
