@@ -21,7 +21,7 @@ if (session_status() == PHP_SESSION_NONE) {
           </form>
   </div-->
   <?php
-  if(isset($_SESSION['logged']) && $_SESSION['logged']==true)
+  if(isset($_SESSION['vendorlogged']) && $_SESSION['vendorlogged']==true)
     { echo '<span class=login_user>';
       //echo $_SESSION["username"];
       echo '</span>';
