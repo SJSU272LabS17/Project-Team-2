@@ -1,4 +1,6 @@
-
+<?php		
+   session_start();		
+ ?>	
 <!DOCTYPE html>
 <html lang="en"><head>
     <meta charset="utf-8">
@@ -64,7 +66,7 @@
     ?>
   <div class="container">
 
-      <form class="form-signin">
+      <form class="form-signin"  method="post">
 		  <h4 class="form-signin-heading">Vendor Sign In</h4>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" name="Email" class="form-control" placeholder="Email address" required autofocus>
