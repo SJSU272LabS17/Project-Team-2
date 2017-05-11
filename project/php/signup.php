@@ -27,7 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if(mysqli_query($conn, $sql)){
     echo "Records added successfully dsadaasda.";
     $_SESSION['logged']=true;
-    $_SESSION['username']=$email;
+    $firstname = explode(" ",$username);
+    $_SESSION['username']=$firstname;
+    $_SESSION['email'] = $email;
   }
   else{
      $_SESSION['logged']=false;
