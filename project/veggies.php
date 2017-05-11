@@ -23,7 +23,7 @@
   <div class="col-md-4">
       <div class="thumbnail">
         <a href="inventory.html" data-target="#theModal" data-toggle="modal">
-          <img src="../images/brocolli.jpg" alt="Fjords" style="width:100%">
+          <img src="images/brocolli.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Brocolli</p>
           </div>
@@ -42,7 +42,7 @@
   <div class="col-md-4">
       <div class="thumbnail">
         <a href="inventory.html" data-target="#theModal" data-toggle="modal">
-          <img src="../images/kale.jpg" alt="Fjords" style="width:100%">
+          <img src="images/kale.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Kale</p>
           </div>
@@ -61,7 +61,7 @@
   <div class="col-md-4">
       <div class="thumbnail">
         <a href="inventory.html" data-target="#theModal" data-toggle="modal">
-          <img src="../images/spinach.jpg" alt="Fjords" style="width:100%">
+          <img src="images/spinach.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Spinach</p>
           </div>
@@ -80,7 +80,7 @@
   <div class="col-md-4">
       <div class="thumbnail">
         <a href="inventory.html" data-target="#theModal" data-toggle="modal">
-          <img src="../images/tomatoes.jpg" alt="Fjords" style="width:100%">
+          <img src="images/tomatoes.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Tomatoes</p>
           </div>
@@ -99,7 +99,7 @@
   <div class="col-md-4">
       <div class="thumbnail">
         <a href="inventory.html" data-target="#theModal" data-toggle="modal">
-          <img src="../images/lettuce.jpg" alt="Fjords" style="width:100%">
+          <img src="images/lettuce.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Lettuce</p>
           </div>
@@ -119,7 +119,7 @@
   <div class="col-md-4">
       <div class="thumbnail">
         <a href="inventory.html" data-target="#theModal" data-toggle="modal">
-          <img src="../images/onion.jpg" alt="Fjords" style="width:100%">
+          <img src="images/onion.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Onion</p>
           </div>
@@ -138,7 +138,7 @@
   <div class="col-md-4">
       <div class="thumbnail">
         <a href="inventory.html" data-target="#theModal" data-toggle="modal">
-          <img src="../images/mushroom.jpg" alt="Fjords" style="width:100%">
+          <img src="images/mushroom.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Mushroom</p>
           </div>
