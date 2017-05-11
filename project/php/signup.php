@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$sql = "INSERT INTO customer (customer_name,  customer_email , customer_password)
         VALUES('$username','$email','$password')" ;
   if(mysqli_query($conn, $sql)){
-    echo "Records added successfully dsadaasda.";
+    echo "Records added successfully .";
     $_SESSION['logged']=true;
     $firstname = explode(" ",$username);
     $_SESSION['username']=$firstname;
