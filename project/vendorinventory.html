@@ -18,21 +18,23 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<!--  <?php
+  <?php
   	include_once("vendorheader.php");
-  ?> -->
+  ?>
+    <h2>Vendory Inventory</h2>
+  <p>Please click on each of the product below and tell us the inventory you have</p>
 <div position="relative">
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Fruits</a></li>
-    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Vegetables</a></li>
-    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Snack</a></li>
+    <li role="presentation" class="active"><a href="#fruits" aria-controls="fruits" role="tab" data-toggle="tab">Fruits</a></li>
+    <li role="presentation"><a href="#veggies" aria-controls="veggies" role="tab" data-toggle="tab">Vegetables</a></li>
+    <li role="presentation"><a href="#snacks" aria-controls="snacks" role="tab" data-toggle="tab">Snacks</a></li>
   </ul>
 	</div>
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="home"><iframe src="fruits.html" height="1080" width="1920"></iframe></div>
-    <div role="tabpanel" class="tab-pane" id="profile">...</div>
-    <div role="tabpanel" class="tab-pane" id="messages">...</div>
-    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+    <div role="tabpanel" class="tab-pane active" id="fruits"><iframe src="fruits.php" height="1080" width="1920"></iframe></div>
+    <div role="tabpanel" class="tab-pane active" id="veggies"><iframe src="veggies.php" height="1080" width="1920"></iframe></div>
+      <div role="tabpanel" class="tab-pane active" id="snacks"><iframe src="snacks.php" height="1080" width="1920"></iframe></div>
+      
   </div>
 
 </div>
