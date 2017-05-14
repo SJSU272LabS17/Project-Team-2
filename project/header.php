@@ -6,9 +6,9 @@ if (session_status() == PHP_SESSION_NONE) {
 ?>
 	<div class="agileits_header">
 		<div class="w3l_search">
-			<form action="#" method="post">
-				<input type="text" name="Product" value="Search a product..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search a product...';}" required="">
-				<input type="submit" value=" ">
+			<form action="search.php" method="get">
+				<input type="text" name="query" min_length=4 value="Search a product..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search a product...';}" required="">
+				<button type="submit" class ="btn btn-info" style="padding:10px;" value=""><i class="fa fa-search" aria-hidden="true"></i></button>
 			</form>
 		</div>
 		<!--div class="product_list_header">
@@ -83,36 +83,17 @@ if (session_status() == PHP_SESSION_NONE) {
   		
 		  
 		  <?php } ?>
-		<?php
-			if($_SERVER['REQUEST_METHOD'] == "POST"){
-				$location =  $_POST['Location'];
-				if($location!= null){
-					setcookie("location",$location,0 , "/");
-					header('Location:'.$_SERVER['PHP_SELF']);
-					exit();
-				}
-			}
-			?>
+		
 			<div class="w3l_header_right" style = "padding-right: 0px">
 				<ul>
 					<li class="dropdown" id="menuLogin" style="padding:10px;">
              <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="Location" style="color:white">Location<i class="fa fa-map-marker" aria-hidden="true"></i><span class="caret"></span></a>
 
 						 <div class="dropdown-menu" style="padding:17px;">
-               <form class="form" method="post" id="formLogin">
-								 <label>Zipcode</label>
-                 <input name="Location" id="Location" type="text" placeholder="5 digit zipcode" style="margin-top:5px;">
-                 <button type="submit" class="btn btn-primary" style="margin-top:10px;">set</button>
-               </form>
+               <button type="submit" onclick="getLocation()" class="btn btn-primary" style="margin-top:10px;">Set</button>
              </div>
            </li>
 				</ul>
-			</div>
-			<div class="location value" style = "padding: 10px;color:white">
-				<?php
-				if(isset($_COOKIE['location'])){ ?>
-					<p><span><font size=3px ><?= $_COOKIE['location'] ?></font></span></p>
-				<?php } ?>
 			</div>
 
 		<div class="clearfix"> </div>
@@ -140,8 +121,8 @@ if (session_status() == PHP_SESSION_NONE) {
 			</div>
 			<div class="w3ls_logo_products_left1">
 				<ul class="special_items">
-					<li><a href="images.html">Products</a><i>/</i></li>
-					<li><a href="homepage.html">About Us</a></li>
+					<li><a href="products.php">Products</a><i>/</i></li>
+					<li><a href="aboutus.php">About Us</a></li>
 					<!--li><a href="products.php">Best Deals</a><i>/</i></li>
 					<li><a href="services.php">Services</a></li-->
 				</ul>
@@ -156,3 +137,56 @@ if (session_status() == PHP_SESSION_NONE) {
 		</div>
 	</div>
 <!-- //header -->
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".dropdown").hover(
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');
+        }
+    );
+});
+</script>
+<!--* to get location value of user -->
+<script type="text/javascript">
+
+function getLocation() {
+
+		 var timeoutVal = 10 * 1000 * 1000;
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, displayError,
+    { enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 });
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    //x.innerHTML = "Latitude: " + position.coords.latitude +
+    //"<br>Longitude: " + position.coords.longitude;
+		$.ajax({
+            type: "POST",
+            url: "getlocation.php",
+            data: {
+                latitude: position.coords.latitude,
+                longitude: position.coords.longitude
+            },
+            success: function (data) {
+                $("#demo").html(data);
+            }
+      });
+}
+
+function displayError(error) {
+  var errors = {
+    1: 'Permission denied',
+    2: 'Position unavailable',
+    3: 'Request timeout'
+  };
+  alert("Error: " + errors[error.code]);
+}
+</script>
