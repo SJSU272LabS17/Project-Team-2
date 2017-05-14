@@ -52,7 +52,7 @@
 			<div class="container">
 				<ul>
 					<li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Home</a><span>|</span></li>
-					<li>Products<span>|</span></li>
+					<li><a href="Products.php" >Products</a><span>|</span></li>
 					<li>Product details</li>
 				</ul>
 			</div>
@@ -71,30 +71,156 @@
 		else {
 			$filterby = NULL;
 		}
-		include_once ("php/dbconnect.php");
-		if( isset($_POST['category']) && isset($_POST['description']) ){
-			$proname = $_POST['name'];
-			$procategory = $_POST['category'];
-			$prodescription = $_POST['description'];
-			$proimage = $_POST['image'];
-		}
-		if(isset($_GET['sortby'])){
-			$sortby = $_GET['sortby'];
-		} else {
-			$sortby = "product_discount";
-		}
-
-		if($filterby == NULL){
-			$sql = "SELECT * FROM product WHERE product_category= 'Fruits' and  ORDER BY $sortby $way ;";
+	  	if(isset($_GET['filterby2'])){
+			$filterby2 = $_GET['filterby2'];
 		}
 		else {
-			$sql = "SELECT * FROM product WHERE product_category= 'Fruits' ORDER BY $sortby $way;";
+			$filterby2 = NULL;
 		}
-		$sql = "SELECT * FROM product WHERE product_category= '$procategory'";
+		if(isset($_GET['filtersby'])){
+			$filtersby = $_GET['filtersby'];
+		}
+		else {
+			$filtersby = NULL;
+		}
+		if(isset($_GET['filtersby2'])){
+			$filtersby2 = $_GET['filtersby2'];
+		}
+		else{
+			$filtersby2 = NULL;
+		}
+		include_once ("php/dbconnect.php");
+		if( isset($_GET['category']) && isset($_GET['name']) ){
+			$proname = $_GET['name'];
+			$procategory = $_GET['category'];
+			$proimage = $_GET['image'];
+		}
+		if($procategory== "Meat "){
+			$procategory= "Meat & Fish";
+		}
+		if($procategory == "Dairy "){
+			$procategory == "Dairy & Eggs";
+		}
+
+		if($filterby != NULL){
+			if($filterby2!=NULL){
+				$sql = "SELECT P.*, D.distance FROM product P INNER JOIN  distance D WHERE P.seller_id = D.seller_id AND P.product_name= '$proname' AND (D.distance>$filterby AND D.distance<$filterby2) ORDER BY $sortby $way  ;";
+			}
+			else{
+				$sql = "SELECT P.* , D.distance FROM product P INNER JOIN distance D WHERE P.seller_id = D.seller_id AND P.product_name= '$proname' AND (D.distance<$filterby) ORDER BY $sortby $way  ;";
+			}
+		}
+		else if($filterby2 != NULL){
+			$sql = "SELECT P.* , D.distance FROM product P INNER JOIN distance D WHERE P.seller_id = D.seller_id AND P.product_name= '$proname' AND (D.distance>$filterby2) ORDER BY $sortby $way  ;";
+		}
+		else if($filtersby!=NULL){
+			$sql= "SELECT * FROM product  WHERE product_name= '$proname' AND product_sell_by_date<(Now() + Interval 7 day) ORDER BY $sortby $way  ;";
+		}
+		else if($filtersby2!=NULL){
+			$sql= "SELECT * FROM product  WHERE product_name= '$proname' AND product_sell_by_date>(Now() + Interval 7 day) ORDER BY $sortby $way  ;";
+		}
+		else {
+			$sql = "SELECT * FROM product WHERE product_name= '$proname' ORDER BY $sortby $way;";
+		}
+		//$sql = "SELECT * FROM product WHERE product_category= '$procategory'";
 		$result=mysqli_query($conn,$sql)
 		?>
 
-  <div class="container" id="productsection">
+  <div class="container" id="productsection" >
+		<!-- select boxes for the the sortby option -->
+		<div class="select_box" align="right" >
+			<p>	Sortby:
+				<select name="menu" id="sortby" onChange="window.document.location.href=this.options[this.selectedIndex].value;" value="Choose">
+				<option value = ''> Choose </option>
+				<?php $url = 'saaho/productdetail.php?category='.$procategory.'&name='.$proname.'&image='.$proimage ?>
+	        <option value="http://localhost/<?= $url ?>&sortby=product_price&way=DESC&filterby=<?php
+				if(isset($_GET['filterby']))
+					echo $filterby;
+				else
+					echo NULL;
+				?> ">Price: High to Low</option>
+	      <option value="http://localhost/<?= $url ?>&sortby=product_price&way=ASC&filterby=<?php
+				if(isset($_GET['filterby']))
+					echo $filterby;
+				else
+					echo NULL;
+				?>">Price: Low to High</option>
+				<option value="http://localhost/<?= $url ?>&sortby=product_sell_by_date&way=ASC&filterby=<?php
+				if(isset($_GET['filterby']))
+					echo $filterby;
+				else
+					echo NULL;
+				?>">Expiry date sooner</option>
+				<option value="http://localhost/<?= $url ?>&sortby=product_sell_by_date&way=DESC&filterby=<?php
+				if(isset($_GET['filterby']))
+					echo $filterby;
+				else
+					echo NULL;
+				?>">Expiry date later</option>
+	 		</select>
+			Filter By:
+			<select name="menu" id=filterby onChange="window.document.location.href=this.options[this.selectedIndex].value;" value="Choose">
+				<option value = ''> Choose </option>
+         	<option value="http://localhost/<?= $url ?>">None</option>
+          	<option value="http://localhost/<?= $url ?>&filterby=2&sortby=<?php
+			if(isset($_GET['sortby']))
+				echo $sortby;
+			else
+				echo "product_price";
+			?>&way=<?php
+			if(isset($_GET['way']))
+				echo $way;
+			else
+				echo "DESC";
+			?>">Distance &lt 2 miles</option>
+          <option value="http://localhost/<?= $url ?>&filterby=2&filterby2=5&sortby=<?php
+			if(isset($_GET['sortby']))
+				echo $sortby;
+			else
+				echo "product_price";
+			?>&way=<?php
+			if(isset($_GET['way']))
+				echo $way;
+			else
+				echo "DESC";
+			?>">Distance 2-5 miles</option>
+          <option value="http://localhost/<?= $url ?>&filterby2=5&sortby=<?php
+			if(isset($_GET['sortby']))
+				echo $sortby;
+			else
+				echo "product_price";
+			?>&way=<?php
+			if(isset($_GET['way']))
+				echo $way;
+			else
+				echo "DESC";
+			?>">Distance &gt 5 miles</option>
+          <option value="http://localhost/<?= $url ?>&filtersby=5&sortby=<?php
+			if(isset($_GET['sortby']))
+				echo $sortby;
+			else
+				echo "product_price";
+			?>&way=<?php
+			if(isset($_GET['way']))
+				echo $way;
+			else
+				echo "DESC";
+			?>">sellbydate &lt 7 days</option>
+          <option value="http://localhost/<?= $url ?>&filtersby2=7&sortby=<?php
+			if(isset($_GET['sortby']))
+				echo $sortby;
+			else
+				echo "product_price";
+			?>&way=<?php
+			if(isset($_GET['way']))
+				echo $way;
+			else
+				echo "DESC";
+			?>">sellbydate &gt 7days</option>
+ 			</select>
+			</p>
+		</div>
+	
     <div class="row ">
      <div class="col-md-4 col-xs-4">
        <div class="row">
@@ -110,39 +236,41 @@
            <h3><?= $proname ?></h3>
          </div>
        </div>
-       <div class="row list-group">
-         <div class="col-md-12">
-           <p class="label label-success">Organic</p>
-         </div>
-       </div>
      </div>
      <div class="col-md-8 col-xs-8">
 			 <h2><a href="<?=$procategory ?>.php"><?= $procategory ?></a></h2>
        <h3>Product details</h3>
        <!--<p>The .table-hover class enables a hover state on table rows:</p> -->
-       <table class="table table-fixed " style="color:black;">
+       <table class="table table-responsive " style="color:black;">
          <thead>
            <tr>
              <th class="col-xs-2">Seller</th>
              <th class="col-xs-2">Price</th>
              <th class="col-xs-2">discount</th>
              <th class="col-xs-3">Sell-by-date</th>
-             <th class="col-xs-2"></th>
+              <th class="col-xs-2">Distance</th>
+	      <th class="col-xs-2">Addtocart</th>
            </tr>
          </thead>
          <tbody>
 				 <?php while($row = mysqli_fetch_assoc($result)){
 	 					$seller = $row['seller_id'];
-
+						$sqld= "SELECT distance from distance where seller_id = $seller ;";
 	 					$markedprice = $row['product_price'];
 	 					$discount= $row['product_price']*($row['product_discount']/100);
 	 					$newprice = number_format(($row['product_price']-$discount),2,'.',' ');
 						$sql1 = "SELECT * FROM seller WHERE seller_id= $seller;";
+						$result2 = mysqli_query($conn,$sqld);
 						$result1 = mysqli_query($conn,$sql1);
 						if($result1->num_rows == 1){
 							$row1 = mysqli_fetch_assoc($result1);
 							$seller_name = getSellerName($row1);
 						}
+						if($result2->num_rows == 1){
+							$row2 = mysqli_fetch_assoc($result2);
+							$distance = $row2['distance'];
+						}
+						<td class="col-xs-2" ><?= $distance ?>mi</td>
 
 						?>
      <tr>
@@ -170,5 +298,14 @@
 	}
  ?>
  <?php include_once("footer.php");?>
+<script type="text/javascript">
+ document.getElementById("filterby").onchange = function() {
+ 	 localStorage.setItem('selectedtem', document.getElementById("filterby").value);
+ }
+ if (localStorage.getItem('item')) {
+ 	 document.getElementById("selectedtem").options[localStorage.getItem('selectedtem')].selected = true;
+ }
+ </script>
+
   </body>
 </html>
