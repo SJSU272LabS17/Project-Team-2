@@ -32,7 +32,7 @@
   </ul>
 	</div>
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="fruits"><iframe src="fruits.php" height="1080" width="1920"></iframe></div>
+    <div role="tabpanel" class="tab-pane active" id="fruits"><iframe src="vendorfruits.php" height="1080" width="1920"></iframe></div>
     <div role="tabpanel" class="tab-pane active" id="veggies"><iframe src="veggies.php" height="1080" width="1920"></iframe></div>
       <div role="tabpanel" class="tab-pane active" id="snacks"><iframe src="snacks.php" height="1080" width="1920"></iframe></div>
       
