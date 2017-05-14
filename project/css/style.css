@@ -18,13 +18,18 @@ html, body{
     -moz-border-radius: 0px;
     border-radius: 10px;
 }
-
+.thumbnail .img{		
+  width:400px;		
+  height: 200px;		
+}
 .item.list-group-item
 {
-    float: none;
-    width: 100%;
+    position: none;
+    float: left;
+    width: 80%;
     background-color: #fff;
     margin-bottom: 10px;
+    margin-left: 20px;	
 }
 .item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
 {
@@ -64,9 +69,29 @@ html, body{
 }
 .list-group-item-text
 {
+    font-size: 14px;
     margin: 0 0 11px;
 }
 /*for products display grid-end*/
+/*for resizing the buttons in products */
+@media (max-width: 768px) {
+.btn {	
+  font-size:11px;	
+    padding:4px 6px;		
+  }		
+}
+@media (min-width: 992px) {		
+  .btn {		
+    font-size:14px;		
+    padding:8px 12px;		
+  }		
+}		
+@media (min-width: 1200px) {		
+  .btn {		
+    padding:8px 12px;		
+    font-size:14px;		
+  }		
+}
 /*for product detail page */		
 .add-to-cart .btn-qty {		
   width: 22px;		
@@ -897,8 +922,12 @@ ul.dropdown-menu.drp-mnu li a i {
 /*-- //newsletter --*/
 /*-- footer --*/
 .footer{
-	padding:1.5em 0;
-	background:#11733e;;
+	 position: relative;			
+  bottom:0px;
+  right:0px;
+  left:0px;		
+  padding: 10px;
+  background:#212121;
 }
 .agileits_social_icons li{
 	display:inline-block;
@@ -982,6 +1011,7 @@ ul.dropdown-menu.drp-mnu li a i {
 	color:#FA1818;
 }
 /*-- //footer --*/
+
 /*-- to-top --*/
 #toTop {
 	display: none;
@@ -1443,6 +1473,30 @@ section#tables  p {
 	border: 1px solid #e0e0e0;
 	padding: 16px;
 	background-color: #ffffff;
+}
+.table-fixed thead {		
+  width: 97%;		
+}		
+.table-responsive tbody {		
+  height: 230px;		
+  overflow-y: auto;		
+  overflow-x: scroll;		
+  white-space: nowrap;		
+  width: 100%;		
+}		
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {		
+  display: block;		
+}		
+.table-fixed tbody td, .table-fixed thead > tr> th {		
+  float: left;		
+  border-bottom-width: 0;		
+}
+.table-fixed tbody tr:nth-child(odd) {		
+   background-color: #ccc;		
+}		
+#products li{		
+  display: inline-block;		
+   padding:20px		
 }
 .table td, .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
 	padding: 15px!important;
