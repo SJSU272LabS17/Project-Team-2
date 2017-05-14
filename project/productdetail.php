@@ -71,7 +71,7 @@
 		else {
 			$filterby = NULL;
 		}
-	  	if(isset($_GET['filterby2'])){
+		if(isset($_GET['filterby2'])){
 			$filterby2 = $_GET['filterby2'];
 		}
 		else {
@@ -101,6 +101,11 @@
 		if($procategory == "Dairy "){
 			$procategory == "Dairy & Eggs";
 		}
+		if(isset($_GET['sortby'])){
+			$sortby = $_GET['sortby'];
+		} else {
+			$sortby = "product_discount";
+		}
 
 		if($filterby != NULL){
 			if($filterby2!=NULL){
@@ -122,12 +127,15 @@
 		else {
 			$sql = "SELECT * FROM product WHERE product_name= '$proname' ORDER BY $sortby $way;";
 		}
-		//$sql = "SELECT * FROM product WHERE product_category= '$procategory'";
-		$result=mysqli_query($conn,$sql)
+
+		//echo $sql;
+		//$sql = "SELECT * FROM product WHERE product_name= '$proname'";
+		$result=mysqli_query($conn,$sql);
 		?>
 
   <div class="container" id="productsection" >
 		<!-- select boxes for the the sortby option -->
+
 		<div class="select_box" align="right" >
 			<p>	Sortby:
 				<select name="menu" id="sortby" onChange="window.document.location.href=this.options[this.selectedIndex].value;" value="Choose">
@@ -139,6 +147,7 @@
 				else
 					echo NULL;
 				?> ">Price: High to Low</option>
+
 	      <option value="http://localhost/<?= $url ?>&sortby=product_price&way=ASC&filterby=<?php
 				if(isset($_GET['filterby']))
 					echo $filterby;
@@ -220,7 +229,8 @@
  			</select>
 			</p>
 		</div>
-	
+
+
     <div class="row ">
      <div class="col-md-4 col-xs-4">
        <div class="row">
@@ -236,10 +246,15 @@
            <h3><?= $proname ?></h3>
          </div>
        </div>
+
+
      </div>
+
      <div class="col-md-8 col-xs-8">
+
 			 <h2><a href="<?=$procategory ?>.php"><?= $procategory ?></a></h2>
        <h3>Product details</h3>
+
        <!--<p>The .table-hover class enables a hover state on table rows:</p> -->
        <table class="table table-responsive " style="color:black;">
          <thead>
@@ -248,20 +263,20 @@
              <th class="col-xs-2">Price</th>
              <th class="col-xs-2">discount</th>
              <th class="col-xs-3">Sell-by-date</th>
-              <th class="col-xs-2">Distance</th>
-	      <th class="col-xs-2">Addtocart</th>
+						 <th class="col-xs-2">Distance</th>
+						 <th class="col-xs-2">Addtocart</th>
            </tr>
          </thead>
          <tbody>
 				 <?php while($row = mysqli_fetch_assoc($result)){
 	 					$seller = $row['seller_id'];
-						$sqld= "SELECT distance from distance where seller_id = $seller ;";
+							$sqld= "SELECT distance from distance where seller_id = $seller ;";
 	 					$markedprice = $row['product_price'];
 	 					$discount= $row['product_price']*($row['product_discount']/100);
 	 					$newprice = number_format(($row['product_price']-$discount),2,'.',' ');
 						$sql1 = "SELECT * FROM seller WHERE seller_id= $seller;";
-						$result2 = mysqli_query($conn,$sqld);
 						$result1 = mysqli_query($conn,$sql1);
+						$result2 = mysqli_query($conn,$sqld);
 						if($result1->num_rows == 1){
 							$row1 = mysqli_fetch_assoc($result1);
 							$seller_name = getSellerName($row1);
@@ -270,7 +285,6 @@
 							$row2 = mysqli_fetch_assoc($result2);
 							$distance = $row2['distance'];
 						}
-						<td class="col-xs-2" ><?= $distance ?>mi</td>
 
 						?>
      <tr>
@@ -278,11 +292,13 @@
        <td class="col-xs-2"><s style="color:red;"><?= $row['product_price']; ?></s><strong><?= $newprice; ?></strong> /<?= $row['product_quantity']; ?></td>
        <td class="col-xs-2"><?= $row['product_discount'];?>%</td>
        <td class="col-xs-3"><?= $row['product_sell_by_date']?></td>
+			  <td class="col-xs-2" ><?= $distance ?>mi</td>
        <td class="col-xs-2" >
          <form action="#" >
            <button type=submit class="btn btn-success btn-xs" value="Add"><span class="glyphicon glyphicon-shopping-cart"></span></button>
          </form>
        </td>
+
      </tr>
 		 <?php } ?>
    </tbody>
@@ -297,15 +313,17 @@
 			return $seller_name;
 	}
  ?>
- <?php include_once("footer.php");?>
-<script type="text/javascript">
+ <?php include_once("footer.php"); ?>
+ <script type="text/javascript">
  document.getElementById("filterby").onchange = function() {
  	 localStorage.setItem('selectedtem', document.getElementById("filterby").value);
  }
+
  if (localStorage.getItem('item')) {
  	 document.getElementById("selectedtem").options[localStorage.getItem('selectedtem')].selected = true;
- }
+ }​
  </script>
 
   </body>
 </html>
+
