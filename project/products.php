@@ -15,13 +15,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
 <!-- //font-awesome icons -->
 <!-- js -->
-<script src="js/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <!-- //js -->
 <link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -66,10 +66,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 		<?php include_once("php/dbconnect.php");
-  	 printProducts("Fruits",$conn);
-		 printProducts("Vegetables",$conn);
+  	 	printProducts("Fruits",$conn);
+		// printProducts("Vegetables",$conn);
 		 printProducts("Dairy & Eggs",$conn);
 		 printProducts("Meat & Fish",$conn);
+		 printProducts("Beverages",$conn);
 		  ?>
 		<!--<ul>
 			<li><a href="Vegetables.php">	<h2 class="text-left;">Vegetables</h2></a></li>
@@ -84,10 +85,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <?php function printProducts($category,$conn){ ?>
 	<div id="products" class="row list-group">
 	<ul>
-		<li><a href="Fruits.php">	<h2 class="text-left;"><?= $category ?></h2></a></li>
-		<li><a href="Fruits.php">	<h4 class="text-leftt;" >View More</h4></a></li>
+		<li><a href="<?= $category ?>.php">	<h2 class="text-left;"><?= $category ?></h2></a></li>
+		<li><a href="<?= $category ?>.php">	<h4 class="text-left;" >View More</h4></a></li>
 	</ul>
-	<?php $sql = "SELECT * from product where product_category='$category' LIMIT 8 ;";
+	<?php $sql = "SELECT * from product where product_category='$category' GROUP BY product_name LIMIT 8 ;";
 	$result = $conn->query($sql);
 	if ($result=mysqli_query($conn,$sql))
 	{
@@ -96,7 +97,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		{  ?>
 	<div class="item  col-xs-6 col-lg-3 col-sm-4">
 		<div class="thumbnail">
-			<img class="img-rounded" src=<?= $product['product_image'] ?> alt= <?= $product['product_name'] ?> />
+			<img class="img img-rounded img-responsive " src=<?= $product['product_image'] ?> alt= <?= $product['product_name'] ?> />
 			<div class="caption">
 				 <h4 class="group inner list-group-item-heading"><?= $product['product_name'] ?></h4>
 				 <p class="group inner list-group-item-text">
@@ -118,16 +119,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="row">
 					<div class="col-xs-12 col-md-6">
-						<form action="productdetail.php" method="post">
-							<fieldset>
-								<input type="hidden" name="category" value="<?= $product['product_category'] ?>" />
-								<input type="hidden" name="name" value="<?= $product['product_name'] ?>" />
-								<input type="hidden" name="description" value="<?= $product['product_description'] ?>" />
-								<input type="hidden" name="image" value="<?= $product['product_image'] ?>"  />
-								<button type = "submit" class = "btn btn-success" data-toggle="modal" data-target="Details-1">Details</button>
-							</fieldset>
-						</form>
-					</div>
+						<a href='productdetail.php?category=<?=$product['product_category']?>&name=<?= $product['product_name'] ?>&image=<?= $product['product_image'] ?>' class = "btn btn-success">
+						Details </a>
+							</div>
 					<div class="col-xs-12 col-md-6 ">
 							<form action="#" method="post">
 								<fieldset>
