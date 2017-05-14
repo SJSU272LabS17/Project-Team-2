@@ -17,3 +17,9 @@ added snacks.php
 added products and products details page
 
 modify vendorinventorypage.php
+
+modified style.css
+header.php
+index.php
+products
+productdetail.php -satish
