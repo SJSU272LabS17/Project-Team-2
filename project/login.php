@@ -67,8 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     }
 
-    // If result matched $myusername and $mypassword, table row must be 1 row
-
+  // If result matched $myusername and $mypassword, table row must be 1 row
        if($count == 1) {
 				 $_SESSION['logged']=true;
          $_SESSION['username']=$username[0];
@@ -84,29 +83,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 ?>
 <!-- header -->
-<?php include ("header.php") ; ?>
 <!-- //header -->
 <!-- products-breadcrumb -->
-	<div class="products-breadcrumb">
-		<div class="container">
-			<ul>
-				<li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Home</a><span>|</span></li>
-				<li>Sign In & Sign Up</li>
-			</ul>
-		</div>
-	</div>
 <!-- //products-breadcrumb -->
 <!-- banner -->
-		<div class="w3l_banner_nav_right">
 <!-- login -->
 		<div class="w3_login">
-			<h3>Sign In & Sign Up</h3>
+      <a href="index.php" style="text-align:center"><h1>Grocery Bargain</h1></a>
+      <br/>
+			<h3><font size="6px;">Sign In</font> </h3>
 			<div class="w3_login_module">
 				<div class="module form-module">
 				  <div class="toggle"><i class="fa fa-times fa-pencil"></i>
-					<div class="tooltip">Click Me</div>
 				  </div>
 				  <div class="form">
+
 					<h2>Login to your account</h2>
 					<form action="login.php" method="post">
 					  <input type="text" name="Email" placeholder="Email id:xyz@example.com" required=" ">
@@ -121,73 +112,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</form>
 
 				  </div>
-				  <div class="form">
-					<h2>Create an account</h2>
-					<form name="signupform" action="php/signup.php" method="post" onsubmit="return validateForm()">
-					  <input type="text" name="Username" placeholder="Username" required=" " />
-            <span id=username_error style="color:red;" ></span>
-            <input type="email" name="Email" placeholder="Email Address: xyz@example.com" required=" "/>
-            <span id=email_error style="color:red;"></span>
-					  <input type="password" name="Password" placeholder="Password" required=" ">
-            <span id=password_error style="color:red;"></span></span>
-						<input type="password"  name="Cpassword" placeholder="confirm password" required=" " />
-            <span id=cpassword_error style="color:red;"></span>
-					  <input type="submit" value="Register">
-					</form>
-				  </div>
-				  <div class="cta"><a href="#">Forgot your password?</a></div>
+
 				</div>
 			</div>
-			<script>
-				$('.toggle').click(function(){
-				  // Switches the Icon
-				  $(this).children('i').toggleClass('fa-pencil');
-				  // Switches the forms
-				  $('.form').animate({
-					height: "toggle",
-					'padding-top': 'toggle',
-					'padding-bottom': 'toggle',
-					opacity: "toggle"
-				  }, "slow");
-				});
-			</script>
-			<script>
-			function validateForm() {
-        var username= document.forms["signupform"]["Username"].value;
-    		var email = document.forms["signupform"]["Email"].value;
-        var password= document.forms["signupform"]["Password"].value;
-        var cpassword= document.forms["signupform"]["Cpassword"].value;
-    		if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) {
-        	document.getElementById("email_error").innerHTML="Invalid email Address ";
-        	return false;
-    		}
-        if(!(/^[a-z0-9_-]{3,16}$/.test(username))){
-          document.getElementById("username_error").style.fontSize= "15px";
-          document.getElementById("username_error").style.paddingBottom = "10px";
-          document.getElementById("username_error").innerHTML="Name allows only letters and spaces ";
-          return false;
-        }
-        if(!(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/.test(password))){
-          document.getElementById("password_error").style.fontSize= "15px";
-         document.getElementById("password_error").innerHTML="Password must contain atleast one capital, number, small letter ";
-         return false;
-       }
-       if(password!=cpassword){
-          document.getElementById("password_error").innerHTML="Passwords dont' match ..Enter again";
-          return false;
-        }
-			}
-			</script>
+
 		</div>
-<!-- //login -->
-		</div>
-		<div class="clearfix"></div>
-	</div>
-<!-- //banner -->
-<!-- footer -->
-<?php
-include_once("footer.php");
-?>
+
+
 <!-- //footer -->
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
