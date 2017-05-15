@@ -154,7 +154,7 @@
 								</div>
 								<div class="col-xs-3">
 								<a type="submit" href="checkout.php" class="btn btn-success btn-block">	
-									</a>
+								Checkout</a>
 									</div>
 								</div>
 							</div>
