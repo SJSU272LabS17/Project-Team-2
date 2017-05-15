@@ -90,7 +90,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		{  ?>
 	<div class="item  col-xs-6 col-lg-3 col-sm-4">
 		<div class="thumbnail">
-			<img class="img-rounded" src=<?= $product['product_image'] ?> alt= <?= $product['product_name'] ?> />
+			<img class="img img-rounded img-responsive" src=<?= $product['product_image'] ?> alt= <?= $product['product_name'] ?> />
 			<div class="caption">
 				 <h4 class="group inner list-group-item-heading"><?= $product['product_name'] ?></h4>
 				 <p class="group inner list-group-item-text">
