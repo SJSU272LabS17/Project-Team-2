@@ -8,7 +8,7 @@ if (session_status() == PHP_SESSION_NONE) {
   <div class="w3l_search">
     <form action="#" method="post">
       <input type="text" name="Product" value="Search a product..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search a product...';}" required="">
-      <input type="submit" value=" ">
+      <button type="submit" class ="btn btn-info" style="padding:10px;" value=""><i class="fa fa-search" aria-hidden="true"></i></button>
     </form>
   </div>
   <!--div class="product_list_header">
