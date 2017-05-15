@@ -140,28 +140,28 @@
 			<p>	Sortby:
 				<select name="menu" id="sortby" onChange="window.document.location.href=this.options[this.selectedIndex].value;" value="Choose">
 				<option value = ''> Choose </option>
-				<?php $hostname = $_SERVER['REQUEST_URI'];
+				<?php $hostval = $_SERVER['REQUEST_URI'];
 				 $url = 'productdetail.php?category='.$procategory.'&name='.$proname.'&image='.$proimage ?>
-	        <option value="<?=$hostname?><?= $url ?>&sortby=product_price&way=DESC&filterby=<?php
+	        <option value="<?=$hostval?><?= $url ?>&sortby=product_price&way=DESC&filterby=<?php
 				if(isset($_GET['filterby']))
 					echo $filterby;
 				else
 					echo NULL;
 				?> ">Price: High to Low</option>
 
-	      <option value="<?=$hostname?><?= $url ?>&sortby=product_price&way=ASC&filterby=<?php
+	      <option value="<?=$hostval?><?= $url ?>&sortby=product_price&way=ASC&filterby=<?php
 				if(isset($_GET['filterby']))
 					echo $filterby;
 				else
 					echo NULL;
 				?>">Price: Low to High</option>
-				<option value="<?=$hostname?><?= $url ?>&sortby=product_sell_by_date&way=ASC&filterby=<?php
+				<option value="<?=$hostval?><?= $url ?>&sortby=product_sell_by_date&way=ASC&filterby=<?php
 				if(isset($_GET['filterby']))
 					echo $filterby;
 				else
 					echo NULL;
 				?>">Expiry date sooner</option>
-				<option value="<?=$hostname?><?= $url ?>&sortby=product_sell_by_date&way=DESC&filterby=<?php
+				<option value="<?=$hostval?><?= $url ?>&sortby=product_sell_by_date&way=DESC&filterby=<?php
 				if(isset($_GET['filterby']))
 					echo $filterby;
 				else
@@ -171,8 +171,8 @@
 			Filter By:
 			<select name="menu" id=filterby onChange="window.document.location.href=this.options[this.selectedIndex].value;" value="Choose">
 				<option value = ''> Choose </option>
-         	<option value="<?=$hostname?><?= $url ?>">None</option>
-          	<option value="<?=$hostname?><?= $url ?>&filterby=2&sortby=<?php
+         	<option value="<?=$hostval?><?= $url ?>">None</option>
+          	<option value="<?=$hostval?><?= $url ?>&filterby=2&sortby=<?php
 			if(isset($_GET['sortby']))
 				echo $sortby;
 			else
@@ -183,7 +183,7 @@
 			else
 				echo "DESC";
 			?>">Distance &lt 2 miles</option>
-          <option value="<?=$hostname?><?= $url ?>&filterby=2&filterby2=5&sortby=<?php
+          <option value="<?=$hostval?><?= $url ?>&filterby=2&filterby2=5&sortby=<?php
 			if(isset($_GET['sortby']))
 				echo $sortby;
 			else
@@ -194,7 +194,7 @@
 			else
 				echo "DESC";
 			?>">Distance 2-5 miles</option>
-          <option value="<?=$hostname?><?= $url ?>&filterby2=5&sortby=<?php
+          <option value="<?=$hostval?><?= $url ?>&filterby2=5&sortby=<?php
 			if(isset($_GET['sortby']))
 				echo $sortby;
 			else
@@ -205,7 +205,7 @@
 			else
 				echo "DESC";
 			?>">Distance &gt 5 miles</option>
-          <option value="<?=$hostname?><?= $url ?>&filtersby=5&sortby=<?php
+          <option value="<?=$hostval?><?= $url ?>&filtersby=5&sortby=<?php
 			if(isset($_GET['sortby']))
 				echo $sortby;
 			else
@@ -216,7 +216,7 @@
 			else
 				echo "DESC";
 			?>">sellbydate &lt 7 days</option>
-          <option value="<?=$hostname?><?= $url ?>&filtersby2=7&sortby=<?php
+          <option value="<?=$hostval?><?= $url ?>&filtersby2=7&sortby=<?php
 			if(isset($_GET['sortby']))
 				echo $sortby;
 			else
@@ -271,6 +271,7 @@
          <tbody>
 				 <?php while($row = mysqli_fetch_assoc($result)){
 	 					$seller = $row['seller_id'];
+						$productid = $row['product_id'];
 							$sqld= "SELECT distance from distance where seller_id = $seller ;";
 	 					$markedprice = $row['product_price'];
 	 					$discount= $row['product_price']*($row['product_discount']/100);
@@ -289,17 +290,25 @@
 
 						?>
      <tr>
-       <td class="col-xs-2"><?= $seller_name; ?></td>
+       <td class="col-xs-2"><a href="sellerproducts.php?seller=<?= $seller_name; ?>"><?= $seller_name; ?></a></td>
        <td class="col-xs-2"><s style="color:red;"><?= $row['product_price']; ?></s><strong><?= $newprice; ?></strong> /<?= $row['product_quantity']; ?></td>
        <td class="col-xs-2"><?= $row['product_discount'];?>%</td>
        <td class="col-xs-3"><?= $row['product_sell_by_date']?></td>
-			  <td class="col-xs-2" ><?= $distance ?>mi</td>
+			 <td class="col-xs-2" ><?= $distance ?>mi</td>
        <td class="col-xs-2" >
-         <form action="#" >
+         <form action="addtocart.php" method='get'>
+					 <input type="hidden" name="productid" value="<?= $row['product_id'] ?>" />
+					 <input type="hidden" name="productname" value = "<?= $proname ?>" />
+					 <input type="hidden" name="category" value="<?= $procategory ?>" />
+					 <input type="hidden" name="newprice" value="<?= $newprice ?>" />
+					 <input type="hidden" name="oldprice" value="<?= $row['product_price']; ?>" />
+					 <input type="hidden" name="units" value="<?= $row['product_quantity']; ?>" />
+					 <input type="hidden" name="sellbydate" value="<?= $row['product_sell_by_date'] ?>" />
+					 <input type="hidden" name="sellerid" value="<?= $seller ?>" />
+
            <button type=submit class="btn btn-success btn-xs" value="Add"><span class="glyphicon glyphicon-shopping-cart"></span></button>
          </form>
        </td>
-
      </tr>
 		 <?php } ?>
    </tbody>
