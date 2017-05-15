@@ -7,22 +7,30 @@ include_once("php/dbconnect.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $quantity = $_POST["quantity"];
-  $price = $_POST["perunit"];
+  $price = (float) $_POST["price"];
   $quality = $_POST["quality"];
-  echo $quality;
   $expiry_date = date('Y-m-d', strtotime(' +'.$quality.' days'));
   $discountpercentage = $_POST["discountpercentage"];
   $dp_flag= $_POST["dp_flag"];
   $seller_id = $_SESSION['seller_id'];
+  $product_name = $_POST['product_name'];
+  $product_category = $_POST['product_category'];
 }
 
-$sql = "INSERT INTO product (product_available_units, product_price, product_sell_by_date, product_discount, dynamic_pricing_flag, seller_id)
-VALUES ('$quantity', '$price', '$expiry_date', '$discountpercentage', '$dp_flag', '$seller_id')";
+$sql = "INSERT INTO product (product_available_units, product_price, product_sell_by_date, product_discount, dynamic_pricing_flag, seller_id,product_name,product_category)
+VALUES ('$quantity', '$price', '$expiry_date', '$discountpercentage', '$dp_flag', '$seller_id','$product_name','$product_category')";
 
 if ($conn->query($sql) == TRUE)
 {
-  echo "Success: " . $sql . "<br>";
-
+    if($product_category== "Vegetables") {
+      header('location: veggies.php');
+      }
+    elseif ($product_category== "Snacks") {
+      header('location: snacks.php');
+    }
+    else {
+      header('location: vendorfruits.php');
+}
 }
 else {
     
