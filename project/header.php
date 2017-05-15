@@ -117,7 +117,7 @@ if (session_status() == PHP_SESSION_NONE) {
 	<div class="logo_products">
 		<div class="container">
 			<div class="w3ls_logo_products_left">
-				<h1><a href="index.php"><span>Grocery</span> Bargain</a></h1>
+				<h1><a href="index.php"><span style="color:red; font-size:45px; line-height:35px; font-family: Ar Delaney;">Timely</span>Grocery</a></h1>
 			</div>
 			<div class="w3ls_logo_products_left1">
 				<ul class="special_items">
@@ -190,3 +190,4 @@ function displayError(error) {
   alert("Error: " + errors[error.code]);
 }
 </script>
+
