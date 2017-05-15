@@ -27,7 +27,7 @@ if ($conn->query($sql) == TRUE)
       header('location: veggies.php');
       }
     elseif ($product_category== "Snacks") {
-      header('location: snacks.php');
+      header('location: vendorsnacks.php');
     }
     else {
       header('location: vendorfruits.php');
