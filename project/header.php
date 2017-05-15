@@ -45,6 +45,13 @@ if (session_status() == PHP_SESSION_NONE) {
 			<div class="w3l_header_right1" >
 				<a href="php/logout.php" style="color:white;padding:10px 90px 10px 20px ;float:left;" >logout</a>
 			</div>
+			<div class="w3l_header_right" style = "padding-right: 2em">
+				<p>
+	        <a href="viewcart.php" class="btn btn-success btn-lg">
+	          <span class="glyphicon glyphicon-shopping-cart"></span> My Cart
+	        </a>
+	      </p>
+			</div>
 			<?php
 			}
 			else
@@ -57,7 +64,7 @@ if (session_status() == PHP_SESSION_NONE) {
 							<div class="w3ls_vegetables">
 								<ul class="dropdown-menu drp-mnu">
 									<li><a href="login.php">Login</a></li>
-									<li><a href="login.php">Sign Up</a></li>
+									<li><a href="signup.php">Sign Up</a></li>
 								</ul>
 							</div>
 						</div>
@@ -122,7 +129,7 @@ if (session_status() == PHP_SESSION_NONE) {
 			<div class="w3ls_logo_products_left1">
 				<ul class="special_items">
 					<li><a href="products.php">Products</a><i>/</i></li>
-					<li><a href="aboutus.php">About Us</a></li>
+					<li><a href="#">About Us</a></li>
 					<!--li><a href="products.php">Best Deals</a><i>/</i></li>
 					<li><a href="services.php">Services</a></li-->
 				</ul>
