@@ -101,7 +101,6 @@
 					$proimage = $row1['product_image'];
 				}
 					$units = $row['units'];
-				echo $units;
 
 				$proname = $row['product_name'];
 				$oldprice = $row['old_price'];
@@ -154,9 +153,8 @@
 								<h4 class="text-right">Total: <strong> $<?= $total ?></strong></h4>
 								</div>
 								<div class="col-xs-3">
-								<button type="button" class="btn btn-success btn-block">
-									Checkout
-									</button>
+								<a type="submit" href="checkout.php" class="btn btn-success btn-block">	
+									</a>
 									</div>
 								</div>
 							</div>
