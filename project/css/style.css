@@ -10,6 +10,25 @@ html, body{
 }
 /*for products display grid-Start*/
 .glyphicon { margin-right:5px; }
+#map {		
+  height: 400px;		
+  width: 100%;		
+ }		
+ #floating-panel {		
+      position: relative;		
+      float:center;		
+      display: inline-block;		
+      top: 10px;		
+      left: 25%;		
+      z-index: 5;		
+      background-color: #fff;		
+      padding: 5px;		
+      border: 1px solid #999;		
+      text-align: center;		
+      font-family: 'Roboto','sans-serif';		
+      line-height: 30px;		
+      padding-left: 10px;		
+}		
 .thumbnail
 {
     margin-bottom: 20px;
@@ -18,6 +37,7 @@ html, body{
     -moz-border-radius: 0px;
     border-radius: 10px;
 }
+
 .thumbnail .img{		
   width:400px;		
   height: 200px;		
