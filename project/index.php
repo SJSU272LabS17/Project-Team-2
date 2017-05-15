@@ -96,18 +96,16 @@
 <!-- banner -->
 <div class="container">
   <div id="products" class="row list-group">
-		<h2 class="text-left" style="padding:20px;">Fruits</h2>
 		<?php
 		include_once("php/dbconnect.php");
 	  $sql = "SELECT * from product;";
 		$result = $conn->query($sql);
-
 		if ($result=mysqli_query($conn,$sql))
   	{
   // Fetch one and one row
   	while ($product=mysqli_fetch_assoc($result))
     	{ ?>
-			<div class="item  col-xs-3 col-lg-3">
+			<!--<div class="item  col-xs-3 col-lg-3">
 				<div class="thumbnail">
 					<img class="img-rounded" src=<?= $product['product_image'] ?> alt= <?= $product['product_name'] ?> width=400px height=250px; />
 					<div class="caption">
@@ -138,7 +136,7 @@
  						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
 			<?php }
 		} ?>
 	</div>
@@ -183,9 +181,7 @@ $(document).ready(function(){
 				easingType: 'linear'
 				};
 			*/
-
 			$().UItoTop({ easingType: 'easeOutQuart' });
-
 			});
 	</script>
 <!-- //here ends scrolling icon -->
@@ -195,7 +191,6 @@ $(document).ready(function(){
 	paypal.minicart.render({
 		action: '#'
 	});
-
 	if (~window.location.search.indexOf('reset=true')) {
 		paypal.minicart.reset();
 	}
