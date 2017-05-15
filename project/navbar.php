@@ -14,12 +14,15 @@
 			   <!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 					<ul class="nav navbar-nav nav_1">
-						<li><a href="products.php">Products</a></li>
+						<li><a href="products.php">All Products</a></li>
 						<li><a href="Fruits.php">Fruits</a></li>
+						<li><a href="#">Vegetables</a></li>
 						<li><a href="Dairy & Eggs.php">Diary & Eggs</a></li>
 						<li><a href="Meat & Fish.php">Meat & Fish</a></li>
 						<li><a href="Meat & Fish.php">Beverages</a></li>
-            <li><a href="Snacks.php">Snacks</a></li>
+            			<li><a href="Snacks.php">Snacks</a></li>
+            		</li>
+					</ul>
 					</ul>
 				 </div><!-- /.navbar-collapse -->
 			</nav>
