@@ -15,10 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $seller_id = $_SESSION['seller_id'];
   $product_name = $_POST['product_name'];
   $product_category = $_POST['product_category'];
+  $product_image = 'images/'.$_POST['product_image'];
 }
 
-$sql = "INSERT INTO product (product_available_units, product_price, product_sell_by_date, product_discount, dynamic_pricing_flag, seller_id,product_name,product_category)
-VALUES ('$quantity', '$price', '$expiry_date', '$discountpercentage', '$dp_flag', '$seller_id','$product_name','$product_category')";
+$sql = "INSERT INTO product (product_available_units, product_price, product_sell_by_date, product_discount, dynamic_pricing_flag, seller_id,product_name,product_category,product_image)
+VALUES ('$quantity', '$price', '$expiry_date', '$discountpercentage', '$dp_flag', '$seller_id','$product_name','$product_category','$product_image')";
 
 if ($conn->query($sql) == TRUE)
 {
