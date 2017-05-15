@@ -30,6 +30,7 @@
 <legend></legend>
 <input id = "product_name" type="hidden" name="product_name" value="<?php echo $_GET['productname'];?>">
 <input id = "product_category" type="hidden" name="product_category" value="<?php echo $_GET['productcategory'];?>">
+<input id = "product_image" type="hidden" name="product_image" value="<?php echo $_GET['imageurl'];?>">
 <div class="form-group">
   <label class="col-md-4 control-label">Quanity</label>  
   <div class="col-md-5">
