@@ -23,7 +23,6 @@
             			<li><a href="Snacks.php">Snacks</a></li>
             		</li>
 					</ul>
-					</ul>
 				 </div><!-- /.navbar-collapse -->
 			</nav>
 		</div>
