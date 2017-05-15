@@ -46,10 +46,11 @@
   <div class="col-md-5">
    <div class="form-inline">
     <select id="quality" name="quality" class="form-control">
-      <option value="1">4 Days Fresh</option>
-      <option value="2">3 Days Fresh</option>
+      <option value="5">5 Days Fresh</option>
+      <option value="4">4 Days Fresh</option>
+      <option value="3">3 Days Fresh</option>
       <option value="2">2 Days Fresh</option>
-      <option value="2">1 Day Fresh</option>
+      <option value="1">1 Day Fresh</option>
     </select>
 	  </div>
   </div>  
