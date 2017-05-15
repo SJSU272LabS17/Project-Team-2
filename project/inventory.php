@@ -28,7 +28,8 @@
 
 <!-- Form Name -->
 <legend></legend>
-
+<input id = "product_name" type="hidden" name="product_name" value="<?php echo $_GET['productname'];?>">
+<input id = "product_category" type="hidden" name="product_category" value="<?php echo $_GET['productcategory'];?>">
 <div class="form-group">
   <label class="col-md-4 control-label">Quanity</label>  
   <div class="col-md-5">
@@ -60,8 +61,8 @@
   <label class="col-md-4 control-label">Price</label>  
   <div class="col-md-5">
      <div class="form-inline">
-   <input id="perunit" name="perunit" type="text" class="form-control" placeholder="enter your price.">
-    <select id="price" name="price" class="form-control">
+   <input id="price" name="price" type="text" class="form-control" placeholder="enter your price.">
+    <select id="perunit" name="perunit" class="form-control">
       <option value="1">/lbs</option>
       <option value="2">/kg</option>
     </select>
@@ -82,7 +83,7 @@
   <label class="col-md-4 control-label">Dynamic Pricing</label>  
   <div class="col-md-5">
      <div class="form-inline">
-    <select id="price" name="price" class="form-control">
+    <select id="dp_flag" name="dp_flag" class="form-control">
       <option value="Y">Yes</option>
       <option value="N">No</option>
     </select>
@@ -99,7 +100,6 @@
   </div>
 </div>
 </fieldset>
-
 </form>
 </span>
 </div>
