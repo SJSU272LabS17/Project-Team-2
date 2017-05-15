@@ -1,5 +1,11 @@
 <html>
     <head>
+          <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
 <style>
 @import url('http://fonts.googleapis.com/css?family=Amarante');
 
@@ -69,8 +75,9 @@ h1 {
 /** page structure **/
 #wrapper {
   display: block;
-  width: 850px;
-  background: #fff;
+  width: 900px;
+  background: white;
+  /*#fff;*/
   margin: 0 auto;
   padding: 10px 17px;
   -webkit-box-shadow: 2px 2px 3px -1px rgba(0,0,0,0.35);
@@ -79,16 +86,19 @@ h1 {
 #keywords {
   margin: 0 auto;
   font-size: 1.2em;
+  color: white;
   margin-bottom: 15px;
 }
 
 
 #keywords thead {
   cursor: pointer;
-  background: #c9dff0;
+  background: black;
+  /*#c9dff0;*/
 }
 #keywords thead tr th { 
   font-weight: bold;
+  
   padding: 12px 30px;
   padding-left: 42px;
 }
@@ -162,6 +172,7 @@ mysqli_close($con);
         <th><span>Price</span></th>
         <th><span>Expiration Date</span></th>
         <th><span>Dynamic Pricing Opted</span></th>
+        <th><span></span></th>
       </tr>
     </thead>
       <tbody>
@@ -175,6 +186,9 @@ echo "<td>" . $product['product_available_units'] . "</td>";
 echo "<td>" . $product['product_price'] . "</td>";
 echo "<td>" . $product['product_sell_by_date'] . "</td>";
 echo "<td>" . $product['dynamic_pricing_flag'] . "</td>";
+echo "<td>" ."<button type='button' class='btn btn-default btn-sm'>
+          <span class='glyphicon glyphicon-pencil'></span> 
+        </button> ". "</td>";
 echo "</tr>";
 } ?>
       </tbody>
