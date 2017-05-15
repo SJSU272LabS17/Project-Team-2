@@ -34,8 +34,8 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="mega-dropdown-menu">
           <div class="w3ls_vegetables">
               <ul class="dropdown-menu drp-mnu">
-                <li><a href="viewinventory.php">Orders</a></li>
-                <li><a href="orders.php">Order</a></li>
+                <li><a href="viewinventory.php">My Inventory</a></li>
+                <li><a href="orders.php">My Orders</a></li>
                 <li><a href="php/logout.php"> Logout </a></li>
               </ul>
             </div>
