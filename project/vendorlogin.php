@@ -52,11 +52,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         $count = mysqli_num_rows($result);
         if($count==1) {
-          $query1 = "SELECT seller_name FROM seller WHERE seller_email='$myuseremail'";
+          $query1 = "SELECT seller_name,seller_id FROM seller WHERE seller_email='$myuseremail'";
           $result1 = $conn->query($query1);
           if($result1->num_rows>0){
             $row1 = $result1->fetch_assoc();
             $fullname = $row1['seller_name'];
+            $seller_id = $row1['seller_id'];
             $username = explode(" ",$fullname);
 
             echo $username[0] . "<br />";
@@ -70,6 +71,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     				 $_SESSION['vendorlogged']=true;
              $_SESSION['sellername']=$username[0];
              $_SESSION['selleremail'] = $myuseremail;
+             $_SESSION['seller_id']= $seller_id;
              header("location: vendorinventory.php");
         			exit();
            }else {
