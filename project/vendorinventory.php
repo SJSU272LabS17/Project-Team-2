@@ -33,9 +33,9 @@
   </ul>
 
   <div class="tab-content current">
-    <div role="tabpanel" class="tab-pane active" id="fruits"><iframe src="vendorfruits.php" height="800" width = "1300"></iframe></div>
-    <div role="tabpanel" class="tab-pane" id="veggies"><iframe src="veggies.php" height="800" width = "1300"></iframe></div>
-    <div role="tabpanel" class="tab-pane" id="snacks"><iframe src="vendorsnacks.php" height="800" width = "1300"></iframe></div>
+    <div role="tabpanel" class="tab-pane active" id="fruits"><iframe src="vendorfruits.php" height="800" width = "1300" scrolling="no"></iframe></div>
+    <div role="tabpanel" class="tab-pane" id="veggies"><iframe src="veggies.php" height="800" width = "1300" scrolling="no"></iframe></div>
+    <div role="tabpanel" class="tab-pane" id="snacks"><iframe src="vendorsnacks.php" height="800" width = "1300" scrolling="no"></iframe></div>
   </div>
 
 	</div>
