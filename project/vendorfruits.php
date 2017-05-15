@@ -23,7 +23,7 @@
   <div class="row">
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventory.php?productname=AsianPearl&productcategory=Fruits" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.php?productname=AsianPearl&productcategory=Fruits&imageurl=asianperl.jpg" data-target="#theModal" data-toggle="modal">
           <img src="images/asianperl.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Asian Pearl</p>
@@ -42,7 +42,7 @@
     
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventory.php?productname=Cantaloupe&productcategory=Fruits" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.php?productname=Cantaloupe&productcategory=Fruits&imageurl=cantaloupe.jpg" data-target="#theModal" data-toggle="modal">
           <img src="images/cantaloupe.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Cantaloupe</p>
@@ -61,7 +61,7 @@
   
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventory.php?productname=Grape Fruit&productcategory=Fruits" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.php?productname=Grape Fruit&productcategory=Fruits&imageurl=grapefruit.jpg" data-target="#theModal" data-toggle="modal">
           <img src="images/grapefruit.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Grape Fruit</p>
@@ -80,7 +80,7 @@
    
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventory.php?productname=GreenApple&productcategory=Fruits" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.php?productname=GreenApple&productcategory=Fruits&imageurl=greenapple.jpg" data-target="#theModal" data-toggle="modal">
           <img src="images/greenapple.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Green Apple</p>
@@ -99,7 +99,7 @@
        
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventory.php?productname=Honeydew&productcategory=Fruits" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.php?productname=Honeydew&productcategory=Fruits&imageurl=honeydew.jpg" data-target="#theModal" data-toggle="modal">
           <img src="images/honeydew.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Honeydew</p>
@@ -119,7 +119,7 @@
        
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventory.php?productname=Oranges&productcategory=Fruits" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.php?productname=Oranges&productcategory=Fruits&imageurl=oranges.jpg" data-target="#theModal" data-toggle="modal">
           <img src="images/oranges.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Oranges</p>
@@ -138,7 +138,7 @@
        
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventory.php?productname=Strawberries&productcategory=Fruits" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.php?productname=Strawberries&productcategory=Fruits&imageurl=strawberries.jpg" data-target="#theModal" data-toggle="modal">
           <img src="images/strawberries.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Strawberries</p>
