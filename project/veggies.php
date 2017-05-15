@@ -22,7 +22,7 @@
   <div class="row">
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.php?productname=Brocolli&productcategory=Vegetables" data-target="#theModal" data-toggle="modal">
           <img src="images/brocolli.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Brocolli</p>
@@ -41,7 +41,7 @@
     
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.php?productname=Kale&productcategory=Vegetables" data-target="#theModal" data-toggle="modal">
           <img src="images/kale.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Kale</p>
@@ -60,7 +60,7 @@
   
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.php?productname=Spinach&productcategory=Vegetables" data-target="#theModal" data-toggle="modal">
           <img src="images/spinach.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Spinach</p>
@@ -79,7 +79,7 @@
    
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.php?productname=Tomatoes&productcategory=Vegetables" data-target="#theModal" data-toggle="modal">
           <img src="images/tomatoes.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Tomatoes</p>
@@ -98,7 +98,7 @@
        
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.php?productname=Lettuce&productcategory=Vegetables" data-target="#theModal" data-toggle="modal">
           <img src="images/lettuce.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Lettuce</p>
@@ -118,7 +118,7 @@
        
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.php?productname=Onion&productcategory=Vegetables" data-target="#theModal" data-toggle="modal">
           <img src="images/onion.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Onion</p>
@@ -137,7 +137,7 @@
        
   <div class="col-md-4">
       <div class="thumbnail">
-        <a href="inventory.html" data-target="#theModal" data-toggle="modal">
+        <a href="inventory.php?productname=Mushroom&productcategory=Vegetables" data-target="#theModal" data-toggle="modal">
           <img src="images/mushroom.jpg" alt="Fjords" style="width:100%">
           <div class="caption">
             <p align="center">Mushroom</p>
@@ -193,6 +193,3 @@ $(document).ready(function(){
 
 </body>
 </html>
-
-
-
