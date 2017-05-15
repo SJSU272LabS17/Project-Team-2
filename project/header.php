@@ -31,19 +31,12 @@ if (session_status() == PHP_SESSION_NONE) {
 				<ul>
 					<li class="dropdown profile_details_drop">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Hi,<?php echo $_SESSION["username"]; ?><span class="caret"></span></a>
-					<div class="mega-dropdown-menu">
-						<div class="w3ls_vegetables">
-								<ul class="dropdown-menu drp-mnu">
-									<li><a href="orders.php">Orders</a></li>
-									<li><a href="wishlist.php">Wishlist</a></li>
-								</ul>
-							</div>
-						</div>
+					
 					</li>
 				</ul>
 			</div>
 			<div class="w3l_header_right1" >
-				<a href="php/logout.php" style="color:white;padding:10px 90px 10px 20px ;float:left;" >logout</a>
+				<a href="php/logout.php" style="color:white;padding:10px 10px 10px 20px ;float:left;" >logout</a>
 			</div>
 			<div class="w3l_header_right" style = "padding-right: 2em">
 				<p>
