@@ -24,6 +24,7 @@ and product_discount<=70";
 where product_sell_by_date between curdate()+5 and curdate()+8
 and dynamic_pricing_flag = 'Y'
 and product_discount<=60";
+  $query4 = "delete from product where product_sell_by_date = cur_date()";
    if ($conn->connect_error) {
    echo "Connection Failed";
    die("Connection failed: " . $conn->connect_error);
@@ -33,5 +34,6 @@ and product_discount<=60";
     $conn->query($query1);
     $conn->query($query2);
     $conn->query($query3);
+    $conn->query($query4);
   }
 ?>
