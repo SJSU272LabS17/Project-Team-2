@@ -35,7 +35,7 @@
   <div class="tab-content current">
     <div role="tabpanel" class="tab-pane active" id="fruits"><iframe src="vendorfruits.php" height="800" width = "1500"></iframe></div>
     <div role="tabpanel" class="tab-pane" id="veggies"><iframe src="veggies.php" height="800" width = "1500"></iframe></div>
-    <div role="tabpanel" class="tab-pane" id="snacks"><iframe src="snacks.php" height="800" width = "1500"></iframe></div>
+    <div role="tabpanel" class="tab-pane" id="snacks"><iframe src="vendorsnacks.php" height="800" width = "1500"></iframe></div>
   </div>
 
 	</div>
