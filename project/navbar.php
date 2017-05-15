@@ -15,24 +15,11 @@
 				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 					<ul class="nav navbar-nav nav_1">
 						<li><a href="products.php">Products</a></li>
-						<li><a href="household.php">Fruits</a></li>
-            <li><a href="household.php">vegetables</a></li>
-						<li><a href="kitchen.php">Diary & Eggs</a></li>
-						<li><a href="short-codes.php">Meat & Fish</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Beverages<span class="caret"></span></a>
-							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-								<div class="w3ls_vegetables">
-									<ul>
-										<li><a href="drinks.php">Soft Drinks</a></li>
-										<li><a href="drinks.php">Juices</a></li>
-									</ul>
-								</div>
-							</div>
-						</li>
-						<li><a href="pet.php">Pet Food</a></li>
-            <li><a href="pet.php">Snacks</a></li>
-						<li><a href="bread.php">Bread & Bakery</a></li>
+						<li><a href="Fruits.php">Fruits</a></li>
+						<li><a href="Dairy & Eggs.php">Diary & Eggs</a></li>
+						<li><a href="Meat & Fish.php">Meat & Fish</a></li>
+						<li><a href="Meat & Fish.php">Beverages</a></li>
+            <li><a href="Snacks.php">Snacks</a></li>
 					</ul>
 				 </div><!-- /.navbar-collapse -->
 			</nav>
