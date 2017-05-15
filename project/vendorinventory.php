@@ -21,24 +21,24 @@
   <?php
         include_once("vendorheader.php");
   ?>
-
-    <h2>Vendory Inventory</h2>
-  <p>Please click on each of the product below and tell us the inventory you have</p>
-<div position="relative">
+    <br/>
+        <br/>
+    <h2  style=" text-align: center;">Vendory Inventory</h2>
+  <p style=" text-align: center;">Please click on each of the product below and tell us the inventory you have</p>
+<div position="absolute">
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#fruits" aria-controls="fruits" role="tab" data-toggle="tab">Fruits</a></li>
     <li role="presentation"><a href="#veggies" aria-controls="veggies" role="tab" data-toggle="tab">Vegetables</a></li>
     <li role="presentation"><a href="#snacks" aria-controls="snacks" role="tab" data-toggle="tab">Snacks</a></li>
   </ul>
-	</div>
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="fruits"><iframe src="vendorfruits.php" height="1080" width="1920"></iframe></div>
-    <div role="tabpanel" class="tab-pane active" id="veggies"><iframe src="veggies.php" height="1080" width="1920"></iframe></div>
-      <div role="tabpanel" class="tab-pane active" id="snacks"><iframe src="snacks.php" height="1080" width="1920"></iframe></div>
-      
+
+  <div class="tab-content current">
+    <div role="tabpanel" class="tab-pane active" id="fruits"><iframe src="vendorfruits.php" height="800" width = "1500"></iframe></div>
+    <div role="tabpanel" class="tab-pane" id="veggies"><iframe src="veggies.php" height="800" width = "1500"></iframe></div>
+    <div role="tabpanel" class="tab-pane" id="snacks"><iframe src="snacks.php" height="800" width = "1500"></iframe></div>
   </div>
 
-</div>
+	</div>
 <script>
 $(document).ready(function(){
     $(".dropdown").hover(
@@ -71,9 +71,8 @@ $(document).ready(function(){
 			});
 	</script>
 <!-- //here ends scrolling icon -->
-
+  <?php
+        include_once("footer.php");
+  ?>
 </body>
 </html>
-
-
-
