@@ -140,27 +140,28 @@
 			<p>	Sortby:
 				<select name="menu" id="sortby" onChange="window.document.location.href=this.options[this.selectedIndex].value;" value="Choose">
 				<option value = ''> Choose </option>
-				<?php $url = 'saaho/productdetail.php?category='.$procategory.'&name='.$proname.'&image='.$proimage ?>
-	        <option value="http://localhost/<?= $url ?>&sortby=product_price&way=DESC&filterby=<?php
+				<?php $hostname = $_SERVER['REQUEST_URI'];
+				 $url = 'productdetail.php?category='.$procategory.'&name='.$proname.'&image='.$proimage ?>
+	        <option value="<?=$hostname?><?= $url ?>&sortby=product_price&way=DESC&filterby=<?php
 				if(isset($_GET['filterby']))
 					echo $filterby;
 				else
 					echo NULL;
 				?> ">Price: High to Low</option>
 
-	      <option value="http://localhost/<?= $url ?>&sortby=product_price&way=ASC&filterby=<?php
+	      <option value="<?=$hostname?><?= $url ?>&sortby=product_price&way=ASC&filterby=<?php
 				if(isset($_GET['filterby']))
 					echo $filterby;
 				else
 					echo NULL;
 				?>">Price: Low to High</option>
-				<option value="http://localhost/<?= $url ?>&sortby=product_sell_by_date&way=ASC&filterby=<?php
+				<option value="<?=$hostname?><?= $url ?>&sortby=product_sell_by_date&way=ASC&filterby=<?php
 				if(isset($_GET['filterby']))
 					echo $filterby;
 				else
 					echo NULL;
 				?>">Expiry date sooner</option>
-				<option value="http://localhost/<?= $url ?>&sortby=product_sell_by_date&way=DESC&filterby=<?php
+				<option value="<?=$hostname?><?= $url ?>&sortby=product_sell_by_date&way=DESC&filterby=<?php
 				if(isset($_GET['filterby']))
 					echo $filterby;
 				else
@@ -170,8 +171,8 @@
 			Filter By:
 			<select name="menu" id=filterby onChange="window.document.location.href=this.options[this.selectedIndex].value;" value="Choose">
 				<option value = ''> Choose </option>
-         	<option value="http://localhost/<?= $url ?>">None</option>
-          	<option value="http://localhost/<?= $url ?>&filterby=2&sortby=<?php
+         	<option value="<?=$hostname?><?= $url ?>">None</option>
+          	<option value="<?=$hostname?><?= $url ?>&filterby=2&sortby=<?php
 			if(isset($_GET['sortby']))
 				echo $sortby;
 			else
@@ -182,7 +183,7 @@
 			else
 				echo "DESC";
 			?>">Distance &lt 2 miles</option>
-          <option value="http://localhost/<?= $url ?>&filterby=2&filterby2=5&sortby=<?php
+          <option value="<?=$hostname?><?= $url ?>&filterby=2&filterby2=5&sortby=<?php
 			if(isset($_GET['sortby']))
 				echo $sortby;
 			else
@@ -193,7 +194,7 @@
 			else
 				echo "DESC";
 			?>">Distance 2-5 miles</option>
-          <option value="http://localhost/<?= $url ?>&filterby2=5&sortby=<?php
+          <option value="<?=$hostname?><?= $url ?>&filterby2=5&sortby=<?php
 			if(isset($_GET['sortby']))
 				echo $sortby;
 			else
@@ -204,7 +205,7 @@
 			else
 				echo "DESC";
 			?>">Distance &gt 5 miles</option>
-          <option value="http://localhost/<?= $url ?>&filtersby=5&sortby=<?php
+          <option value="<?=$hostname?><?= $url ?>&filtersby=5&sortby=<?php
 			if(isset($_GET['sortby']))
 				echo $sortby;
 			else
@@ -215,7 +216,7 @@
 			else
 				echo "DESC";
 			?>">sellbydate &lt 7 days</option>
-          <option value="http://localhost/<?= $url ?>&filtersby2=7&sortby=<?php
+          <option value="<?=$hostname?><?= $url ?>&filtersby2=7&sortby=<?php
 			if(isset($_GET['sortby']))
 				echo $sortby;
 			else
@@ -326,4 +327,3 @@
 
   </body>
 </html>
-
