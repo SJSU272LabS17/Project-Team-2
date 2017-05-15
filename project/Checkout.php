@@ -126,7 +126,10 @@
 										</div>
 									</div>
 									<hr>
-									<?php } ?>
+									<?php } 
+									$sqld = "DELETE FROM shopping_cart where customer_id=$customerid" ;
+                  mysqli_query($conn,$sqld);
+										?>
 								</div>
 								<div class="panel-footer">
 								<div class="row text-center">
