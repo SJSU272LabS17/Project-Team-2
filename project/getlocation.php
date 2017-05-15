@@ -15,8 +15,8 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])){
 
 	//$latitude = number_format(($latitude),6,'.',' ');
 	$longitude = number_format(($longitude),6,'.',' ');
-  $_SESSION['userlat'] =  $latitude;
-  $_SESSION['userlon'] = $longitude;
+ 	setcookie('userlat', $latitude, time() + (86400 * 30), "/");	
+	setcookie('userlon', $longitude, time() + (86400 * 30), "/");
 	$sql = "INSERT INTO distance (userlat,userlon)  VALUES ( $latitude, $longitude)";
 
   $sql1= "SELECT seller_id,sellerlat,sellerlon FROM seller ;";
