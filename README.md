@@ -23,4 +23,4 @@ Login
 
 Link to project on AWS:
 
-http://ec2-54-183-209-88.us-west-1.compute.amazonaws.com/
+http://ec2-54-215-248-154.us-west-1.compute.amazonaws.com/
