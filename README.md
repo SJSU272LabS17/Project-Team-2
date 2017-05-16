@@ -1,6 +1,6 @@
 
 
-Project Idea#3: Grocercy Bargain: - APPROVED (I will add some challenges)
+Project Idea#3: Timely Grocercy: - APPROVED
 
 Every year united states throws away one-thirds of the food it produces causing billion dollar wastage. Infact some of major retailers dispose the food 3 days before the sell by date as customers no longer choose them. The major cause of this wastage is due to the lack of awareness among the customer regarding the whereabouts of the products,sell-by-dates and the discounted prices at which they are available.
 	
