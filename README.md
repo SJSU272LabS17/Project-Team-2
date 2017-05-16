@@ -19,3 +19,8 @@ we can also enhance the platform in future to help sellers improve and maintain 
 
 Instruction:
 Login 
+
+
+Link to project on AWS:
+
+http://ec2-54-183-209-88.us-west-1.compute.amazonaws.com/
