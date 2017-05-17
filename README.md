@@ -16,7 +16,6 @@ When a customer/buyer logins into the portal he can view the products according 
 
 When customer clicks into product details the customer can check details about all the stores which sell the product and the discounted prices and expiration date offered by each store. After detecting the customer’s browser location we will show the distance to each store so that customer can filter the stores near to his home and also check the driving route for the stores. This provides customer flexibility to buy products suitable to his need at affordable price.
 
-![Product price comparison](project/images/productcomparision.png)
 
 Future enhancements:
 
@@ -26,6 +25,3 @@ Providing an option for customer to request products for lower price (ex: when s
 
 Including Machine learning to study the purchase data about each product to provide suggestions for vendor to lower/increase the product price based on the sales.
 
-Application Architecture:
-
-The front end of the website is designed using HTML, CSS, Bootstrap and Javascript. For server side programming we have used PHP and for storing and retrieving the data we have used MySQL in Amazon-Rds. The application is hosted on the cloud using amazon aws ec2 instance.
