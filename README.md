@@ -16,6 +16,7 @@ When a customer/buyer logins into the portal he can view the products according 
 
 When customer clicks into product details the customer can check details about all the stores which sell the product and the discounted prices and expiration date offered by each store. After detecting the customer’s browser location we will show the distance to each store so that customer can filter the stores near to his home and also check the driving route for the stores. This provides customer flexibility to buy products suitable to his need at affordable price.
 
+
 Future enhancements:
 
 To provide scalability by extracting the product information from the retail stores database regularly, at present vendor enters each product details manually.
